@@ -1,85 +1,104 @@
-"use client";
-import { useState, useEffect } from "react";
-import emailjs from '@emailjs/browser';
-import { 
-  Stethoscope, Users, Mail, FileSearch, Calendar, 
-  Loader2, X, Download, CheckCircle2, Clock 
-} from "lucide-react";
+import { Activity, CheckCircle2, Eye, MapPin, User, ShieldCheck } from "lucide-react";
 
-export default function DoctorDashboard({ user, API_URL }) {
-  const [patients, setPatients] = useState([]);
-  const [selectedPatient, setSelectedPatient] = useState(null);
-  const [modalType, setModalType] = useState(null); // 'view_report' or 'appointment'
-  const [loading, setLoading] = useState(false);
+export default function DoctorDashboard({ doctorInfo, doctorPatients, setSelectedPatient, setModalType }) {
+  
+  // Logic: Doctor ki specialty ke hisaab se queue manage karna
+  // doctorInfo mein 'specialty' honi chahiye (e.g., "Physiotherapist")
+  const specialty = doctorInfo?.specialty || "General Physician";
 
-  // EmailJS Keys (Aapki purani keys)
-  const SERVICE_ID = "service_7xz5xxn";
-  const PUBLIC_KEY = "E0kMjrhVjc96ySAzv";
-  const TEMPLATE_ID_APPOINT = "template_cve9ewl";
-
-  useEffect(() => { fetchPatients(); }, []);
-
-  const fetchPatients = async () => {
-    try {
-      const res = await fetch(`${API_URL}/doctor/patients`);
-      if (res.ok) setPatients(await res.json());
-    } catch (e) { console.error("Fetch error", e); }
-  };
-
-  const handleSendAppointment = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    const formData = new FormData(e.target);
-    
-    const templateParams = {
-      to_email: selectedPatient.email,
-      to_name: selectedPatient.name,
-      doctor_name: user.full_name,
-      date_time: formData.get("date"),
-      message: formData.get("message")
-    };
-
-    try {
-      await emailjs.send(SERVICE_ID, TEMPLATE_ID_APPOINT, templateParams, PUBLIC_KEY);
-      alert("Appointment email sent successfully!");
-      setModalType(null);
-    } catch (err) { alert("Email failed to send."); }
-    finally { setLoading(false); }
-  };
+  const sortedPatients = [...doctorPatients].sort((a, b) => {
+    // Agar doctor Physio ya Neurologist hai, toh High Risk ko priority do
+    if (specialty === "Physiotherapist" || specialty === "Neurologist") {
+      const riskPriority = { "High Risk": 3, "Moderate Risk": 2, "Low Risk": 1 };
+      return (riskPriority[b.risk] || 0) - (riskPriority[a.risk] || 0);
+    }
+    return 0;
+  });
 
   return (
-    <div className="space-y-6 animate-in fade-in duration-500">
-      {/* Stats Header */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-emerald-500 flex items-center justify-between">
-          <div><p className="text-slate-400 text-xs font-bold uppercase">Pending Patients</p><h2 className="text-4xl font-black">{patients.length}</h2></div>
-          <Users className="text-emerald-100 h-12 w-12" />
+    <div className="space-y-6">
+      {/* --- DOCTOR PROFILE CARD (The "Layer" Header) --- */}
+      <div className="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="flex items-center gap-4">
+          <div className="h-16 w-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200">
+            <User size={32} />
+          </div>
+          <div>
+            <h2 className="text-2xl font-black text-slate-800">Dr. {doctorInfo?.name}</h2>
+            <div className="flex items-center gap-2">
+              <span className="px-3 py-0.5 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-full uppercase tracking-wider border border-blue-100">
+                {specialty}
+              </span>
+              <span className="flex items-center gap-1 text-emerald-500 text-[10px] font-bold uppercase">
+                <ShieldCheck size={12} /> Verified Staff
+              </span>
+            </div>
+          </div>
+        </div>
+        
+        <div className="text-center md:text-right">
+          <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest">Assigned Queue</p>
+          <p className="text-3xl font-black text-slate-800">{doctorPatients.length} <span className="text-sm font-medium text-slate-400">Patients</span></p>
         </div>
       </div>
 
-      {/* Patient Table */}
-      <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
-        <div className="p-6 bg-slate-50 border-b flex justify-between items-center">
-          <h3 className="font-bold text-lg text-slate-700">Patient Consultation Queue</h3>
+      {/* --- QUEUE SECTION --- */}
+      <div className="bg-white rounded-[2rem] shadow-xl overflow-hidden border border-slate-100">
+        <div className="p-6 border-b border-slate-100 bg-slate-50/50">
+          <h3 className="font-bold text-slate-700 flex items-center gap-2">
+            <Activity className="text-blue-500" size={18} /> 
+            {specialty === "Physiotherapist" ? "Critical Rehabilitation Queue" : "General Consultation Queue"}
+          </h3>
         </div>
+        
         <div className="overflow-x-auto">
           <table className="w-full text-left">
-            <thead className="text-xs font-bold text-slate-400 uppercase bg-white border-b">
-              <tr><th className="p-4">Patient Details</th><th className="p-4">AI Risk Level</th><th className="p-4">Submission Date</th><th className="p-4">Actions</th></tr>
+            <thead className="bg-slate-50/50 text-slate-400 text-[10px] font-black uppercase tracking-widest">
+              <tr>
+                <th className="p-6">Patient Name</th>
+                <th className="p-6">Risk Category</th>
+                <th className="p-6">Clinical Action</th>
+                <th className="p-6 text-right">Review</th>
+              </tr>
             </thead>
-            <tbody>
-              {patients.map((p, i) => (
-                <tr key={i} className="border-b hover:bg-slate-50 transition-colors">
-                  <td className="p-4"><div className="font-bold text-slate-800">{p.name}</div><div className="text-xs text-slate-400">{p.email}</div></td>
-                  <td className="p-4">
-                    <span className={`px-3 py-1 rounded-full text-xs font-bold ${p.risk === "High Risk" ? "bg-red-100 text-red-600" : "bg-emerald-100 text-emerald-600"}`}>
+            <tbody className="divide-y divide-slate-100">
+              {sortedPatients.map((p, i) => (
+                <tr key={i} className="hover:bg-blue-50/20 transition-all group">
+                  <td className="p-6">
+                    <p className="font-bold text-slate-800">{p.name}</p>
+                    <p className="text-[10px] text-slate-400 font-medium italic">Click view for full history</p>
+                  </td>
+                  <td className="p-6">
+                    <span className={`px-4 py-1.5 rounded-lg text-[10px] font-black border ${
+                      p.risk.includes("High") ? "bg-red-50 text-red-600 border-red-100" : "bg-emerald-50 text-emerald-600 border-emerald-100"
+                    }`}>
                       {p.risk}
                     </span>
                   </td>
-                  <td className="p-4 text-sm text-slate-500">{new Date(p.date).toLocaleDateString()}</td>
-                  <td className="p-4 flex gap-2">
-                    <button onClick={() => { setSelectedPatient(p); setModalType('view_report'); }} className="px-4 py-2 bg-blue-50 text-blue-600 rounded-lg text-xs font-bold hover:bg-blue-100 flex items-center gap-1"><FileSearch size={14}/> Report</button>
-                    <button onClick={() => { setSelectedPatient(p); setModalType('appointment'); }} className="px-4 py-2 bg-emerald-50 text-emerald-600 rounded-lg text-xs font-bold hover:bg-emerald-100 flex items-center gap-1"><Calendar size={14}/> Schedule</button>
+                  <td className="p-6">
+                    {/* Layered Action based on Specialty & Risk */}
+                    <div className="text-xs font-bold text-slate-600">
+                      {p.risk.includes("High") && specialty === "Physiotherapist" && (
+                        <span className="flex items-center gap-2 text-red-500">
+                           <div className="w-2 h-2 bg-red-500 rounded-full animate-ping"></div>
+                           Immediate Physical Assessment Needed
+                        </span>
+                      )}
+                      {p.risk.includes("Moderate") && (
+                        <span className="text-slate-500 italic">Verify symptoms & schedule follow-up</span>
+                      )}
+                      {!p.risk.includes("High") && !p.risk.includes("Moderate") && (
+                        <span className="text-emerald-500">Reassure Patient: No MND Detected</span>
+                      )}
+                    </div>
+                  </td>
+                  <td className="p-6 text-right">
+                    <button 
+                      onClick={() => {setSelectedPatient(p); setModalType('view_report')}}
+                      className="px-4 py-2 bg-slate-100 text-slate-600 rounded-xl text-xs font-bold group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm"
+                    >
+                      <Eye size={14} className="inline mr-1" /> View Report
+                    </button>
                   </td>
                 </tr>
               ))}
@@ -87,25 +106,6 @@ export default function DoctorDashboard({ user, API_URL }) {
           </table>
         </div>
       </div>
-
-      {/* Appointment Modal */}
-      {modalType === 'appointment' && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden animate-in zoom-in">
-            <div className="p-6 border-b flex justify-between items-center bg-slate-50">
-              <h3 className="font-bold text-lg">Schedule Appointment</h3>
-              <X className="cursor-pointer" onClick={() => setModalType(null)} />
-            </div>
-            <form onSubmit={handleSendAppointment} className="p-6 space-y-4">
-              <div><label className="text-xs font-bold text-slate-500">DATE & TIME</label><input name="date" type="datetime-local" required className="w-full p-3 border rounded-xl mt-1" /></div>
-              <div><label className="text-xs font-bold text-slate-500">MESSAGE</label><textarea name="message" className="w-full p-3 border rounded-xl mt-1 h-24" placeholder="Dr. XYZ is available for consultation..."></textarea></div>
-              <button disabled={loading} className="w-full bg-emerald-600 text-white font-bold py-3 rounded-xl hover:bg-emerald-700 flex justify-center gap-2">
-                {loading ? <Loader2 className="animate-spin" /> : <><Mail size={18}/> Send Notification</>}
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
