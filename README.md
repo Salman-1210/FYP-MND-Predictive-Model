@@ -500,7 +500,6 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ## 🙏 Acknowledgments
 
-- Neurology clinics in Karachi for providing clinical data
 - Open-source community for ML libraries
 - Patients and families who inspired this work
 
