@@ -40,7 +40,7 @@ Main University Road, Karachi, 75300, Pakistan
 Phone: +92 21 3498-8000  
 Website: www.ssuet.edu.pk
 
-
+---
 
 ## 📑 Table of Contents
 
