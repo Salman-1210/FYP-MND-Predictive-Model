@@ -1,5 +1,32 @@
-
 # FYP-MND-Predictive-Model
+## Team Members
+
+| Name | Roll Number | Email |
+|------|-------------|-------|
+| **Salman Khan** | 2022F-BCE-001 | ce22f-001@ssuet.edu.pk |
+| **Muzammil Ahmed Ansari** | 2022F-BCE-009 | ce22f-009@ssuet.edu.pk |
+| **Muhammad Jon Abbas** | 2022F-BCE-029 | ce22f-029@ssuet.edu.pk |
+| **Farhan Ali** | 2022F-BCE-045 | ce22f-045@ssuet.edu.pk |
+
+---
+
+## Internal Advisor
+
+**Dr. Huma Hassan Rizvi**
+
+Department of Computer Engineering  
+Sir Syed University of Engineering & Technology
+
+---
+
+## Institution
+
+**Sir Syed University of Engineering & Technology (SSUET)**
+
+Main University Road, Karachi, 75300, Pakistan  
+Phone: +92 21 3498-8000  
+Website: www.ssuet.edu.pk
+
 Final Year Project - AI-powered predictive modeling for Motor Neuron Disease (ALS, PBP, PMA) using Random Forest with validation. Achieves 94% accuracy on clinical NCV data.
 =======
 #  FYP-MND-Predictive-Model
