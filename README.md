@@ -470,20 +470,6 @@ SECRET_KEY=your-secret-key
 FLASK_ENV=development
 ```
 
----
-
-## 👥 Team
-
-| Name | Role |
-|------|------|
-| **Salman** | ML Engineer & Backend Developer |
-| **Farhan Ali** | Frontend Developer & UI/UX Designer |
-
-**Supervisor:** [Your Supervisor Name]  
-**Institution:** [Your University Name]
-
----
-
 ## 📄 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
