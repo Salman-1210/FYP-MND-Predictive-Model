@@ -46,7 +46,6 @@ Final Year Project - AI-powered predictive modeling for Motor Neuron Disease (AL
 - [Future Work](#-future-work)
 - [Tech Stack](#-tech-stack)
 - [Installation & Setup](#-installation--setup)
-- [Team](#-team)
 - [License](#-license)
 
 ---
