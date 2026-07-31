@@ -18,7 +18,7 @@ Final Year Project - AI-powered predictive modeling for Motor Neuron Disease (AL
 
 | Name | Roll Number | Email |
 |------|-------------|-------|
-| **Salman Khan** | 2022F-BCE-001 | ce22f-001@ssuet.edu.pk |
+| **Salman Khan** | 2022F-BCE-001 | salman.netsec.khan@gmail.com |
 | **Muzammil Ahmed Ansari** | 2022F-BCE-009 | ce22f-009@ssuet.edu.pk |
 | **Muhammad Jon Abbas** | 2022F-BCE-029 | ce22f-029@ssuet.edu.pk |
 | **Farhan Ali** | 2022F-BCE-045 | ce22f-045@ssuet.edu.pk |
