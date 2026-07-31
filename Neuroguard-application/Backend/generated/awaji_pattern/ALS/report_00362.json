@@ -1,0 +1,67 @@
+{
+  "report_id": "AWAJI_ALS_00362",
+  "criteria_type": "awaji",
+  "true_label": "ALS",
+  "variant_type": "mild",
+  "lab_id": "LAB_A",
+  "format_type": "format_B",
+  "Motor_NCS": [
+    {
+      "nerve": "Ulnar (ADM)",
+      "dist_cm": 7.0,
+      "lat_ms": 7.71,
+      "cmap_mV": 2.34,
+      "ncv_mps": 29.32
+    },
+    {
+      "nerve": "Median (APB)",
+      "dist_cm": 7.0,
+      "lat_ms": 7.44,
+      "cmap_mV": 1.89,
+      "ncv_mps": 27.86
+    },
+    {
+      "nerve": "Tibial (AH)",
+      "dist_cm": 9.0,
+      "lat_ms": 8.33,
+      "cmap_mV": 1.94,
+      "ncv_mps": 20.0
+    }
+  ],
+  "Sensory_NCS": [
+    {
+      "nerve": "Median (SNAP)",
+      "dist_cm": 14.0,
+      "lat_ms": 2.38,
+      "snap_uV": 29.67,
+      "ncv_mps": 63.22
+    },
+    {
+      "nerve": "Sural (SNAP)",
+      "dist_cm": 14.0,
+      "lat_ms": 3.33,
+      "snap_uV": 20.92,
+      "ncv_mps": 47.99
+    }
+  ],
+  "EMG_Interpretation": {
+    "active_denervation": true,
+    "chronic_neurogenic_changes": true,
+    "fasciculations": true,
+    "regions_involved": [
+      "cervical",
+      "lumbosacral"
+    ]
+  },
+  "criteria_meta": {
+    "LMN_evidence_weight": "high",
+    "fasciculations_count_as_LMN": true
+  },
+  "latent_factors_debug": {
+    "sev": 0.525,
+    "lmn": 0.652,
+    "umn": 0.542,
+    "bulbar": 0.432,
+    "spread": 0.796
+  }
+}

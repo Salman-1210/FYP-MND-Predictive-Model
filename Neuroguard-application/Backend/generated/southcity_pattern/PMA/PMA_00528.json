@@ -1,0 +1,148 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "12.72",
+      "Distance_cm": "32.45",
+      "Amplitude_mv": "0.52",
+      "NCV_ms": "34.51"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.10",
+      "Distance_cm": "6.43",
+      "Amplitude_mv": "1.93",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "2.80",
+      "Distance_cm": "6.96",
+      "Amplitude_mv": "5.05",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "3.11",
+      "Distance_cm": "7.19",
+      "Amplitude_mv": "5.45",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.96",
+      "Distance_cm": "6.72",
+      "Amplitude_mv": "5.76",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "ELBOW",
+      "Latency_ms": "7.97",
+      "Distance_cm": "24.16",
+      "Amplitude_mv": "5.19",
+      "NCV_ms": "54.52"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "5.98",
+      "Distance_cm": "22.57",
+      "Amplitude_mv": "4.69",
+      "NCV_ms": "59.97"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.31",
+      "Distance_cm": "15.03",
+      "Amplitude_uv": "35.64",
+      "NCV_ms": "68.45"
+    },
+    {
+      "Nerve": "Rt. Sural",
+      "Recording_Site": "Ankle",
+      "Stimulation_Site": "Calf",
+      "Latency_ms": "3.03",
+      "Distance_cm": "13.79",
+      "Amplitude_uv": "12.20",
+      "NCV_ms": "48.53"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. FDI",
+      "Fibs": "++",
+      "Psw": "++",
+      "Others": "Fasc",
+      "Amp": "None",
+      "Duration": "High",
+      "Polys": "Long",
+      "Recruit": "No",
+      "Interference": "Reduced"
+    },
+    {
+      "Muscles": "Rt. VL",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Fasc",
+      "Amp": "None",
+      "Duration": "Increased",
+      "Polys": "Long",
+      "Recruit": "Reduced",
+      "Interference": "Reduced"
+    },
+    {
+      "Muscles": "Rt. TA",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "High",
+      "Polys": "Increased",
+      "Recruit": "Reduced",
+      "Interference": "Poor"
+    },
+    {
+      "Muscles": "Tongue",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "N",
+      "Polys": "Normal",
+      "Recruit": "Normal",
+      "Interference": "Full"
+    },
+    {
+      "Muscles": "Genioglossus",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Normal",
+      "Polys": "N",
+      "Recruit": "Normal",
+      "Interference": "FF"
+    },
+    {
+      "Muscles": "Orbicularis Oris",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "N",
+      "Polys": "Normal",
+      "Recruit": "Yes",
+      "Interference": "FF"
+    }
+  ]
+}

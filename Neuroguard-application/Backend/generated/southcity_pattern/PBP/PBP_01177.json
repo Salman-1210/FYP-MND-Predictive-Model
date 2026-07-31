@@ -1,0 +1,165 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "RL. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "4.28",
+      "Distance_cm": "32.57",
+      "Amplitude_mv": "5.61",
+      "NCV_ms": "44.09"
+    },
+    {
+      "Nerve_Muscles": "RL. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "2.09",
+      "Distance_cm": "24.63",
+      "Amplitude_mv": "6.96",
+      "NCV_ms": "55.22"
+    },
+    {
+      "Nerve_Muscles": "RL. Median APB",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "3.34",
+      "Distance_cm": "7.44",
+      "Amplitude_mv": "7.97",
+      "NCV_ms": "56.74"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "RL. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.04",
+      "Amplitude_uv": "23.01",
+      "NCV_ms": "75.23"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Orbicularis Oris",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Fasciculations": "None",
+      "Others": "Fasc",
+      "Amp": "High",
+      "Duration": "Long",
+      "Polys": "Polyphasic",
+      "Recruit": "Reduced",
+      "Interference": "RFR"
+    },
+    {
+      "Muscles": "Genioglossus",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Fasciculations": "None",
+      "Others": "Nil",
+      "Amp": "High",
+      "Duration": "Increased",
+      "Polys": "Long",
+      "Recruit": "No",
+      "Interference": "Reduced"
+    },
+    {
+      "Muscles": "Tongue",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "High",
+      "Polys": "Polyphasic",
+      "Recruit": "Reduced",
+      "Interference": "RFR"
+    },
+    {
+      "Muscles": "RL. TA",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Fasciculations": "None",
+      "Others": "Nil",
+      "Amp": "Full",
+      "Duration": "Normal",
+      "Polys": "N",
+      "Recruit": "Yes",
+      "Interference": "FF"
+    },
+    {
+      "Muscles": "RL. FDI",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Fasciculations": "None",
+      "Others": "Nil",
+      "Amp": "Full",
+      "Duration": "N",
+      "Polys": "N",
+      "Recruit": "Yes",
+      "Interference": "Normal"
+    },
+    {
+      "Muscles": "Rt. FDI",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "N",
+      "Polys": "Normal",
+      "Recruit": "Yes",
+      "Interference": "FF"
+    },
+    {
+      "Muscles": "Rt. Biceps",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Normal",
+      "Polys": "N",
+      "Recruit": "Normal",
+      "Interference": "Full"
+    },
+    {
+      "Muscles": "Rt. TA",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Normal",
+      "Polys": "Normal",
+      "Recruit": "Normal",
+      "Interference": "Full"
+    },
+    {
+      "Muscles": "Lt. TA",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "N",
+      "Polys": "Normal",
+      "Recruit": "Yes",
+      "Interference": "Full"
+    },
+    {
+      "Muscles": "Rt. VL",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "N",
+      "Polys": "Normal",
+      "Recruit": "Yes",
+      "Interference": "FF"
+    },
+    {
+      "Muscles": "Lt. FDI",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Normal",
+      "Polys": "N",
+      "Recruit": "Normal",
+      "Interference": "Full"
+    }
+  ]
+}

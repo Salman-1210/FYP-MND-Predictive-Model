@@ -1,0 +1,82 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "RL. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "3.88",
+      "Distance_cm": "8.76",
+      "Amplitude_mv": "5.87",
+      "NCV_ms": "42.30"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "RL. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "1.98",
+      "Amplitude_uv": "22.70",
+      "NCV_ms": "64.51"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Orbicularis Oris",
+      "Fibs": "++++",
+      "Psw": "++++",
+      "Fasciculations": "None",
+      "Others": "Fasc",
+      "Amp": "High",
+      "Duration": "High",
+      "Polys": "Increased",
+      "Recruit": "No",
+      "Interference": "Reduced"
+    },
+    {
+      "Muscles": "Tongue",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Long",
+      "Polys": "Long",
+      "Recruit": "Reduced",
+      "Interference": "Poor"
+    },
+    {
+      "Muscles": "Genioglossus",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "High",
+      "Polys": "Increased",
+      "Recruit": "Reduced",
+      "Interference": "Poor"
+    },
+    {
+      "Muscles": "RL. TA",
+      "Fibs": "+",
+      "Psw": "+",
+      "Fasciculations": "None",
+      "Others": "Fasc",
+      "Amp": "Full",
+      "Duration": "Increased",
+      "Polys": "Long",
+      "Recruit": "Reduced",
+      "Interference": "RFR"
+    },
+    {
+      "Muscles": "RL. FDI",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Fasciculations": "None",
+      "Others": "Nil",
+      "Amp": "Full",
+      "Duration": "N",
+      "Polys": "N",
+      "Recruit": "Yes",
+      "Interference": "Full"
+    }
+  ]
+}

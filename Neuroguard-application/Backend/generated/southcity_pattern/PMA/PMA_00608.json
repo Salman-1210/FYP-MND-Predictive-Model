@@ -1,0 +1,85 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "12.39",
+      "Distance_cm": "32.50",
+      "Amplitude_mv": "0.48",
+      "NCV_ms": "36.48"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "14.54",
+      "Distance_cm": "44.61",
+      "Amplitude_mv": "3.09",
+      "NCV_ms": "46.91"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "2.85",
+      "Distance_cm": "7.30",
+      "Amplitude_mv": "5.26",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "2.78",
+      "Distance_cm": "6.71",
+      "Amplitude_mv": "5.12",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "16.15",
+      "Distance_cm": "10.15",
+      "Amplitude_mv": "0.32",
+      "NCV_ms": "39.50"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "11.33",
+      "Distance_cm": "32.63",
+      "Amplitude_mv": "0.86",
+      "NCV_ms": "40.12"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.01",
+      "Distance_cm": "13.58",
+      "Amplitude_uv": "37.06",
+      "NCV_ms": "70.78"
+    },
+    {
+      "Nerve": "Rt. Sural",
+      "Recording_Site": "Ankle",
+      "Stimulation_Site": "Calf",
+      "Latency_ms": "3.01",
+      "Distance_cm": "12.68",
+      "Amplitude_uv": "13.42",
+      "NCV_ms": "48.19"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. Gastroc",
+      "Fibs": "++",
+      "Psw": "++",
+      "Others": "Fasc",
+      "Amp": "None",
+      "Duration": "Increased",
+      "Polys": "Long",
+      "Recruit": "Reduced",
+      "Interference": "RFR"
+    }
+  ]
+}

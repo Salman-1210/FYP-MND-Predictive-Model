@@ -1,0 +1,115 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.76",
+      "Distance_cm": "6.72",
+      "Amplitude_mv": "4.71",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.44",
+      "Distance_cm": "6.50",
+      "Amplitude_mv": "5.08",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "ELBOW",
+      "Latency_ms": "7.95",
+      "Distance_cm": "24.74",
+      "Amplitude_mv": "5.28",
+      "NCV_ms": "60.00"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "2.76",
+      "Distance_cm": "7.04",
+      "Amplitude_mv": "5.04",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "14.87",
+      "Distance_cm": "38.56",
+      "Amplitude_mv": "3.63",
+      "NCV_ms": "41.51"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "3.74",
+      "Distance_cm": "6.72",
+      "Amplitude_mv": "1.87",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "6.23",
+      "Distance_cm": "23.92",
+      "Amplitude_mv": "4.25",
+      "NCV_ms": "53.46"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.00",
+      "Distance_cm": "14.32",
+      "Amplitude_uv": "40.33",
+      "NCV_ms": "61.42"
+    },
+    {
+      "Nerve": "Rt. Median",
+      "Recording_Site": "F2",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.61",
+      "Distance_cm": "14.75",
+      "Amplitude_uv": "52.30",
+      "NCV_ms": "54.14"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. Gastroc",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "High",
+      "Polys": "Increased",
+      "Recruit": "No",
+      "Interference": "RFR"
+    },
+    {
+      "Muscles": "Rt. FDI",
+      "Fibs": "++",
+      "Psw": "++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Long",
+      "Polys": "Long",
+      "Recruit": "Reduced",
+      "Interference": "Reduced"
+    },
+    {
+      "Muscles": "Rt. TPS",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Fasc",
+      "Amp": "TD",
+      "Duration": "Increased",
+      "Polys": "Long",
+      "Recruit": "No",
+      "Interference": "Poor"
+    }
+  ]
+}

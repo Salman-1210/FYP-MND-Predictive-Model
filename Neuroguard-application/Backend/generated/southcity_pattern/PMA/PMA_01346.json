@@ -1,0 +1,60 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "2.81",
+      "Distance_cm": "6.51",
+      "Amplitude_mv": "5.24",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "14.41",
+      "Distance_cm": "43.20",
+      "Amplitude_mv": "3.30",
+      "NCV_ms": "42.87"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.48",
+      "Distance_cm": "7.50",
+      "Amplitude_mv": "0.77",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "13.79",
+      "Distance_cm": "41.32",
+      "Amplitude_mv": "3.74",
+      "NCV_ms": "38.86"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.00",
+      "Distance_cm": "14.85",
+      "Amplitude_uv": "38.99",
+      "NCV_ms": "63.83"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. Gastroc",
+      "Fibs": "++",
+      "Psw": "++",
+      "Others": "Fasc",
+      "Amp": "None",
+      "Duration": "Increased",
+      "Polys": "Polyphasic",
+      "Recruit": "No",
+      "Interference": "RFR"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "15.48",
+      "Distance_cm": "43.16",
+      "Amplitude_mv": "3.36",
+      "NCV_ms": "42.11"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "13.94",
+      "Distance_cm": "31.09",
+      "Amplitude_mv": "0.46",
+      "NCV_ms": "31.92"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "1.95",
+      "Distance_cm": "13.77",
+      "Amplitude_uv": "38.94",
+      "NCV_ms": "59.63"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. VL",
+      "Fibs": "++",
+      "Psw": "++",
+      "Others": "Fasc",
+      "Amp": "None",
+      "Duration": "High",
+      "Polys": "Polyphasic",
+      "Recruit": "No",
+      "Interference": "RFR"
+    },
+    {
+      "Muscles": "Rt. Gastroc",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Normal",
+      "Polys": "N",
+      "Recruit": "Normal",
+      "Interference": "Full"
+    }
+  ]
+}

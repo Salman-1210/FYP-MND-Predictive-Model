@@ -1,0 +1,107 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "15.44",
+      "Distance_cm": "9.64",
+      "Amplitude_mv": "0.59",
+      "NCV_ms": "33.93"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "14.40",
+      "Distance_cm": "43.00",
+      "Amplitude_mv": "3.51",
+      "NCV_ms": "42.77"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.54",
+      "Distance_cm": "7.04",
+      "Amplitude_mv": "5.29",
+      "NCV_ms": "-"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "1.90",
+      "Distance_cm": "13.90",
+      "Amplitude_uv": "36.75",
+      "NCV_ms": "63.50"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. VL",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Increased",
+      "Polys": "Polyphasic",
+      "Recruit": "Reduced",
+      "Interference": "RFR"
+    },
+    {
+      "Muscles": "Rt. Gastroc",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Normal",
+      "Polys": "N",
+      "Recruit": "Yes",
+      "Interference": "FF"
+    },
+    {
+      "Muscles": "Rt. TA",
+      "Fibs": "+",
+      "Psw": "+",
+      "Others": "Fasc",
+      "Amp": "None",
+      "Duration": "Increased",
+      "Polys": "Long",
+      "Recruit": "Reduced",
+      "Interference": "Reduced"
+    },
+    {
+      "Muscles": "Rt. Biceps",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Normal",
+      "Polys": "N",
+      "Recruit": "Normal",
+      "Interference": "Normal"
+    },
+    {
+      "Muscles": "Rt. TPS",
+      "Fibs": "+",
+      "Psw": "+",
+      "Others": "Nil",
+      "Amp": "TD",
+      "Duration": "Increased",
+      "Polys": "Increased",
+      "Recruit": "No",
+      "Interference": "Reduced"
+    },
+    {
+      "Muscles": "Rt. FDI",
+      "Fibs": "++",
+      "Psw": "++",
+      "Others": "Fasc",
+      "Amp": "None",
+      "Duration": "Increased",
+      "Polys": "Increased",
+      "Recruit": "Reduced",
+      "Interference": "Reduced"
+    }
+  ]
+}

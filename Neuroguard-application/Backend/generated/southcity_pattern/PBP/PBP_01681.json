@@ -1,0 +1,108 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "RL. Ulnar ADQ",
+      "Stimulus_Site": "ELBOW",
+      "Latency_ms": "3.44",
+      "Distance_cm": "8.74",
+      "Amplitude_mv": "6.38",
+      "NCV_ms": "53.56"
+    },
+    {
+      "Nerve_Muscles": "RL. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "2.36",
+      "Distance_cm": "23.65",
+      "Amplitude_mv": "6.80",
+      "NCV_ms": "59.60"
+    },
+    {
+      "Nerve_Muscles": "RL. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "3.46",
+      "Distance_cm": "9.11",
+      "Amplitude_mv": "5.50",
+      "NCV_ms": "50.59"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "RL. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.28",
+      "Amplitude_uv": "21.70",
+      "NCV_ms": "75.22"
+    },
+    {
+      "Nerve": "RL. Sural",
+      "Recording_Site": "ANKLE",
+      "Stimulation_Site": "CALF",
+      "Latency_ms": "2.89",
+      "Amplitude_uv": "17.05",
+      "NCV_ms": "57.53"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Orbicularis Oris",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Fasciculations": "None",
+      "Others": "Nil",
+      "Amp": "High",
+      "Duration": "High",
+      "Polys": "Long",
+      "Recruit": "Reduced",
+      "Interference": "Reduced"
+    },
+    {
+      "Muscles": "Genioglossus",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Fasciculations": "None",
+      "Others": "Nil",
+      "Amp": "High",
+      "Duration": "Long",
+      "Polys": "Polyphasic",
+      "Recruit": "No",
+      "Interference": "Poor"
+    },
+    {
+      "Muscles": "Tongue",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Fasciculations": "None",
+      "Others": "Nil",
+      "Amp": "High",
+      "Duration": "Increased",
+      "Polys": "Polyphasic",
+      "Recruit": "No",
+      "Interference": "Poor"
+    },
+    {
+      "Muscles": "RL. TA",
+      "Fibs": "++",
+      "Psw": "++",
+      "Fasciculations": "None",
+      "Others": "Fasc",
+      "Amp": "Full",
+      "Duration": "Increased",
+      "Polys": "Long",
+      "Recruit": "No",
+      "Interference": "Poor"
+    },
+    {
+      "Muscles": "RL. FDI",
+      "Fibs": "Nil",
+      "Psw": "Nil",
+      "Fasciculations": "None",
+      "Others": "Nil",
+      "Amp": "Full",
+      "Duration": "Normal",
+      "Polys": "Normal",
+      "Recruit": "Normal",
+      "Interference": "Normal"
+    }
+  ]
+}

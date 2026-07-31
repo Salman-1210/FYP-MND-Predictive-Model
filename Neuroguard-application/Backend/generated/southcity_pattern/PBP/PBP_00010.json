@@ -1,0 +1,106 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "RL. Median APB",
+      "Stimulus_Site": "ELBOW",
+      "Latency_ms": "2.60",
+      "Distance_cm": "7.42",
+      "Amplitude_mv": "7.99",
+      "NCV_ms": "53.58"
+    },
+    {
+      "Nerve_Muscles": "RL. Ulnar ADQ",
+      "Stimulus_Site": "ELBOW",
+      "Latency_ms": "3.66",
+      "Distance_cm": "9.76",
+      "Amplitude_mv": "6.52",
+      "NCV_ms": "55.15"
+    },
+    {
+      "Nerve_Muscles": "RL. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "3.91",
+      "Distance_cm": "9.19",
+      "Amplitude_mv": "5.48",
+      "NCV_ms": "43.62"
+    },
+    {
+      "Nerve_Muscles": "RL. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "2.09",
+      "Distance_cm": "25.60",
+      "Amplitude_mv": "6.93",
+      "NCV_ms": "53.58"
+    },
+    {
+      "Nerve_Muscles": "RL. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "4.01",
+      "Distance_cm": "32.68",
+      "Amplitude_mv": "5.55",
+      "NCV_ms": "47.35"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "RL. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "1.91",
+      "Amplitude_uv": "23.45",
+      "NCV_ms": "74.31"
+    },
+    {
+      "Nerve": "RL. Sural",
+      "Recording_Site": "ANKLE",
+      "Stimulation_Site": "CALF",
+      "Latency_ms": "2.56",
+      "Amplitude_uv": "17.89",
+      "NCV_ms": "51.51"
+    },
+    {
+      "Nerve": "RL. Median",
+      "Recording_Site": "F2",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.66",
+      "Amplitude_uv": "25.63",
+      "NCV_ms": "60.90"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Tongue",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Fasciculations": "None",
+      "Others": "Fasc",
+      "Amp": "High",
+      "Duration": "High",
+      "Polys": "Long",
+      "Recruit": "Reduced",
+      "Interference": "Poor"
+    },
+    {
+      "Muscles": "Genioglossus",
+      "Fibs": "++++",
+      "Psw": "++++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Long",
+      "Polys": "Long",
+      "Recruit": "Reduced",
+      "Interference": "RFR"
+    },
+    {
+      "Muscles": "Orbicularis Oris",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Long",
+      "Polys": "Increased",
+      "Recruit": "No",
+      "Interference": "RFR"
+    }
+  ]
+}

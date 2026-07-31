@@ -1,0 +1,79 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "RL. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "4.23",
+      "Distance_cm": "27.61",
+      "Amplitude_mv": "6.55",
+      "NCV_ms": "49.25"
+    },
+    {
+      "Nerve_Muscles": "RL. Ulnar ADQ",
+      "Stimulus_Site": "ELBOW",
+      "Latency_ms": "3.88",
+      "Distance_cm": "9.29",
+      "Amplitude_mv": "6.42",
+      "NCV_ms": "62.07"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "RL. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.21",
+      "Amplitude_uv": "22.62",
+      "NCV_ms": "70.26"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Tongue",
+      "Fibs": "++++",
+      "Psw": "++++",
+      "Fasciculations": "None",
+      "Others": "Nil",
+      "Amp": "High",
+      "Duration": "High",
+      "Polys": "Long",
+      "Recruit": "Reduced",
+      "Interference": "Reduced"
+    },
+    {
+      "Muscles": "Orbicularis Oris",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Fasciculations": "None",
+      "Others": "Fasc",
+      "Amp": "High",
+      "Duration": "Long",
+      "Polys": "Long",
+      "Recruit": "No",
+      "Interference": "Poor"
+    },
+    {
+      "Muscles": "Genioglossus",
+      "Fibs": "++++",
+      "Psw": "++++",
+      "Others": "Fasc",
+      "Amp": "None",
+      "Duration": "High",
+      "Polys": "Long",
+      "Recruit": "No",
+      "Interference": "Poor"
+    },
+    {
+      "Muscles": "RL. TA",
+      "Fibs": "+",
+      "Psw": "+",
+      "Fasciculations": "None",
+      "Others": "Fasc",
+      "Amp": "Full",
+      "Duration": "Increased",
+      "Polys": "Long",
+      "Recruit": "No",
+      "Interference": "Reduced"
+    }
+  ]
+}

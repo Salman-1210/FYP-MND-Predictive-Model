@@ -1,0 +1,36 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "5.17",
+      "Distance_cm": "6.91",
+      "Amplitude_mv": "0.74",
+      "NCV_ms": "-"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Median",
+      "Recording_Site": "F2",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "3.14",
+      "Distance_cm": "14.93",
+      "Amplitude_uv": "19.79",
+      "NCV_ms": "45.27"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. Orbi. Oris",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Fasc",
+      "Amp": "-",
+      "Duration": "Long",
+      "Polys": "Long",
+      "Recruit": "Reduced",
+      "Interference": "RFR"
+    }
+  ]
+}

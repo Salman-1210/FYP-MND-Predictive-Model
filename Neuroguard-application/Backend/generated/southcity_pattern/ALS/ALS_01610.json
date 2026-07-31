@@ -1,0 +1,71 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "5.18",
+      "Distance_cm": "6.60",
+      "Amplitude_mv": "0.86",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "9.21",
+      "Distance_cm": "11.47",
+      "Amplitude_mv": "2.86",
+      "NCV_ms": "47.51"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "7.39",
+      "Distance_cm": "21.88",
+      "Amplitude_mv": "3.10",
+      "NCV_ms": "55.70"
+    },
+    {
+      "Nerve_Muscles": "Lt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "4.15",
+      "Distance_cm": "7.30",
+      "Amplitude_mv": "3.31",
+      "NCV_ms": "-"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.66",
+      "Distance_cm": "13.05",
+      "Amplitude_uv": "24.46",
+      "NCV_ms": "50.88"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. Orbi. Oris",
+      "Fibs": "++++",
+      "Psw": "++++",
+      "Others": "Fasc",
+      "Amp": "-",
+      "Duration": "High",
+      "Polys": "Polyphasic",
+      "Recruit": "No",
+      "Interference": "RFR"
+    },
+    {
+      "Muscles": "Rt. TA",
+      "Fibs": "++++",
+      "Psw": "++++",
+      "Others": "Fasc",
+      "Amp": "High",
+      "Duration": "High",
+      "Polys": "Polyphasic",
+      "Recruit": "No",
+      "Interference": "Reduced"
+    }
+  ]
+}

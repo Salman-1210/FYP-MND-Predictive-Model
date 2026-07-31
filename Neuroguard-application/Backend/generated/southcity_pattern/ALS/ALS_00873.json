@@ -1,0 +1,44 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "8.35",
+      "Distance_cm": "22.20",
+      "Amplitude_mv": "0.37",
+      "NCV_ms": "61.06"
+    },
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "18.72",
+      "Distance_cm": "8.76",
+      "Amplitude_mv": "1.42",
+      "NCV_ms": "43.73"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Lt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.52",
+      "Distance_cm": "12.02",
+      "Amplitude_uv": "25.64",
+      "NCV_ms": "46.69"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. FDI",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Increased",
+      "Polys": "Polyphasic",
+      "Recruit": "Reduced",
+      "Interference": "Reduced"
+    }
+  ]
+}

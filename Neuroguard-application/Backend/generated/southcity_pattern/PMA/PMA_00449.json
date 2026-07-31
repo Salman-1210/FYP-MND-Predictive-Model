@@ -1,0 +1,60 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "2.60",
+      "Distance_cm": "6.39",
+      "Amplitude_mv": "4.89",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "13.86",
+      "Distance_cm": "44.22",
+      "Amplitude_mv": "3.83",
+      "NCV_ms": "41.00"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "13.45",
+      "Distance_cm": "38.20",
+      "Amplitude_mv": "2.89",
+      "NCV_ms": "44.35"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "5.12",
+      "Distance_cm": "6.78",
+      "Amplitude_mv": "5.69",
+      "NCV_ms": "-"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Median",
+      "Recording_Site": "F2",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.58",
+      "Distance_cm": "13.97",
+      "Amplitude_uv": "54.15",
+      "NCV_ms": "60.13"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. Biceps",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "High",
+      "Polys": "Long",
+      "Recruit": "Reduced",
+      "Interference": "Poor"
+    }
+  ]
+}

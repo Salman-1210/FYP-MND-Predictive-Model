@@ -1,0 +1,113 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.74",
+      "Distance_cm": "6.94",
+      "Amplitude_mv": "2.35",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "9.69",
+      "Distance_cm": "10.46",
+      "Amplitude_mv": "2.97",
+      "NCV_ms": "50.14"
+    },
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "14.28",
+      "Distance_cm": "40.79",
+      "Amplitude_mv": "1.80",
+      "NCV_ms": "38.31"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "ELBOW",
+      "Latency_ms": "9.00",
+      "Distance_cm": "25.54",
+      "Amplitude_mv": "0.29",
+      "NCV_ms": "54.13"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "NR",
+      "Distance_cm": "NR",
+      "Amplitude_mv": "NR",
+      "NCV_ms": "NR"
+    },
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "14.04",
+      "Distance_cm": "34.62",
+      "Amplitude_mv": "1.39",
+      "NCV_ms": "37.17"
+    },
+    {
+      "Nerve_Muscles": "\"",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "11.36",
+      "Distance_cm": "9.47",
+      "Amplitude_mv": "0.30",
+      "NCV_ms": "52.99"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Lt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.67",
+      "Distance_cm": "13.82",
+      "Amplitude_uv": "26.14",
+      "NCV_ms": "52.89"
+    },
+    {
+      "Nerve": "Rt. Sural",
+      "Recording_Site": "Ankle",
+      "Stimulation_Site": "Calf",
+      "Latency_ms": "2.53",
+      "Distance_cm": "12.62",
+      "Amplitude_uv": "8.50",
+      "NCV_ms": "51.23"
+    },
+    {
+      "Nerve": "Lt. Median",
+      "Recording_Site": "F2",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "3.08",
+      "Distance_cm": "14.15",
+      "Amplitude_uv": "31.33",
+      "NCV_ms": "44.17"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. TA",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Fasc",
+      "Amp": "High",
+      "Duration": "Increased",
+      "Polys": "Polyphasic",
+      "Recruit": "No",
+      "Interference": "RFR"
+    },
+    {
+      "Muscles": "Rt. FDI",
+      "Fibs": "++++",
+      "Psw": "++++",
+      "Others": "Fasc",
+      "Amp": "None",
+      "Duration": "Long",
+      "Polys": "Polyphasic",
+      "Recruit": "Reduced",
+      "Interference": "RFR"
+    }
+  ]
+}

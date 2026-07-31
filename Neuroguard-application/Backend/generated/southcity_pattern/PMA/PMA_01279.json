@@ -1,0 +1,87 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "13.01",
+      "Distance_cm": "31.81",
+      "Amplitude_mv": "0.51",
+      "NCV_ms": "30.81"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "14.01",
+      "Distance_cm": "42.18",
+      "Amplitude_mv": "3.15",
+      "NCV_ms": "46.13"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "10.89",
+      "Distance_cm": "28.73",
+      "Amplitude_mv": "0.83",
+      "NCV_ms": "36.44"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "7.75",
+      "Distance_cm": "8.95",
+      "Amplitude_mv": "4.09",
+      "NCV_ms": "45.43"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.57",
+      "Distance_cm": "6.54",
+      "Amplitude_mv": "5.71",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "3.85",
+      "Distance_cm": "6.61",
+      "Amplitude_mv": "1.85",
+      "NCV_ms": "-"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.08",
+      "Distance_cm": "15.21",
+      "Amplitude_uv": "38.87",
+      "NCV_ms": "65.72"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. Biceps",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Increased",
+      "Polys": "Increased",
+      "Recruit": "Reduced",
+      "Interference": "Poor"
+    },
+    {
+      "Muscles": "Rt. VL",
+      "Fibs": "++",
+      "Psw": "++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Long",
+      "Polys": "Increased",
+      "Recruit": "No",
+      "Interference": "Poor"
+    }
+  ]
+}

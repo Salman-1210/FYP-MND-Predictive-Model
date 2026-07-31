@@ -1,0 +1,40 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "PE",
+      "Latency_ms": "NR",
+      "Distance_cm": "NR",
+      "Amplitude_mv": "NR",
+      "NCV_ms": "NR"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "DE",
+      "Latency_ms": "NR",
+      "Distance_cm": "NR",
+      "Amplitude_mv": "NR",
+      "NCV_ms": "NR"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "W",
+      "Latency_ms": "2.42",
+      "Distance_cm": "7.28",
+      "Amplitude_mv": "1.22",
+      "NCV_ms": ""
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "W",
+      "Latency_ms": "NR",
+      "Distance_cm": "NR",
+      "Amplitude_uv": "NR",
+      "NCV_ms": "NR"
+    }
+  ],
+  "Electromyography": []
+}

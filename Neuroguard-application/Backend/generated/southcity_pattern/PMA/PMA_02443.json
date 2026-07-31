@@ -1,0 +1,92 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "8.19",
+      "Distance_cm": "8.61",
+      "Amplitude_mv": "4.50",
+      "NCV_ms": "53.21"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "13.77",
+      "Distance_cm": "8.59",
+      "Amplitude_mv": "0.58",
+      "NCV_ms": "34.57"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "ELBOW",
+      "Latency_ms": "7.29",
+      "Distance_cm": "22.56",
+      "Amplitude_mv": "5.85",
+      "NCV_ms": "54.13"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.08",
+      "Distance_cm": "6.92",
+      "Amplitude_mv": "1.96",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "13.35",
+      "Distance_cm": "31.15",
+      "Amplitude_mv": "0.54",
+      "NCV_ms": "34.28"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.51",
+      "Distance_cm": "7.22",
+      "Amplitude_mv": "5.32",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "3.14",
+      "Distance_cm": "7.45",
+      "Amplitude_mv": "4.83",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "14.46",
+      "Distance_cm": "44.11",
+      "Amplitude_mv": "3.11",
+      "NCV_ms": "45.37"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Sural",
+      "Recording_Site": "Ankle",
+      "Stimulation_Site": "Calf",
+      "Latency_ms": "2.65",
+      "Distance_cm": "13.20",
+      "Amplitude_uv": "12.59",
+      "NCV_ms": "54.21"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. Gastroc",
+      "Fibs": "++",
+      "Psw": "++",
+      "Others": "Fasc",
+      "Amp": "None",
+      "Duration": "Increased",
+      "Polys": "Polyphasic",
+      "Recruit": "No",
+      "Interference": "Poor"
+    }
+  ]
+}

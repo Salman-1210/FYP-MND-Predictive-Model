@@ -1,0 +1,93 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "6.74",
+      "Distance_cm": "23.40",
+      "Amplitude_mv": "4.26",
+      "NCV_ms": "58.14"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "13.37",
+      "Distance_cm": "29.20",
+      "Amplitude_mv": "0.53",
+      "NCV_ms": "35.24"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "14.42",
+      "Distance_cm": "10.46",
+      "Amplitude_mv": "0.27",
+      "NCV_ms": "38.94"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "7.74",
+      "Distance_cm": "9.27",
+      "Amplitude_mv": "4.61",
+      "NCV_ms": "44.98"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "2.71",
+      "Distance_cm": "6.77",
+      "Amplitude_mv": "4.80",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "3.60",
+      "Distance_cm": "6.79",
+      "Amplitude_mv": "1.78",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "5.07",
+      "Distance_cm": "7.02",
+      "Amplitude_mv": "5.34",
+      "NCV_ms": "-"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.28",
+      "Distance_cm": "14.64",
+      "Amplitude_uv": "41.94",
+      "NCV_ms": "70.87"
+    },
+    {
+      "Nerve": "Rt. Median",
+      "Recording_Site": "F2",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.40",
+      "Distance_cm": "12.94",
+      "Amplitude_uv": "51.26",
+      "NCV_ms": "60.49"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. TPS",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Fasc",
+      "Amp": "TD",
+      "Duration": "High",
+      "Polys": "Polyphasic",
+      "Recruit": "Reduced",
+      "Interference": "Poor"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "report_id": "EL_ESCORIAL_ALS_02814",
+  "criteria_type": "el_escorial",
+  "true_label": "ALS",
+  "variant_type": "mild",
+  "lab_id": "LAB_C",
+  "format_type": "format_C",
+  "Motor_NCS": [
+    {
+      "nerve": "Ulnar (ADM)",
+      "dist_cm": 7.0,
+      "lat_ms": 8.17,
+      "cmap_mV": 0.7,
+      "ncv_mps": 32.5
+    },
+    {
+      "nerve": "Tibial (AH)",
+      "dist_cm": 9.0,
+      "lat_ms": 9.61,
+      "cmap_mV": 0.86,
+      "ncv_mps": 29.08
+    },
+    {
+      "nerve": "Peroneal (EDB)",
+      "dist_cm": 9.0,
+      "lat_ms": 8.05,
+      "cmap_mV": 0.81,
+      "ncv_mps": 20.0
+    }
+  ],
+  "Sensory_NCS": [
+    {
+      "nerve": "Ulnar (SNAP)",
+      "dist_cm": 14.0,
+      "lat_ms": 2.34,
+      "snap_uV": 36.47,
+      "ncv_mps": 50.8
+    },
+    {
+      "nerve": "Sural (SNAP)",
+      "dist_cm": 14.0,
+      "lat_ms": 3.51,
+      "snap_uV": 17.19,
+      "ncv_mps": 45.03
+    }
+  ],
+  "EMG_Interpretation": {
+    "active_denervation": true,
+    "chronic_neurogenic_changes": true,
+    "fasciculations": true,
+    "regions_involved": [
+      "cervical",
+      "lumbosacral"
+    ]
+  },
+  "criteria_meta": {
+    "UMN_signs_documented": true,
+    "LMN_regions_count": 2
+  },
+  "latent_factors_debug": {
+    "sev": 0.618,
+    "lmn": 0.789,
+    "umn": 0.431,
+    "bulbar": 0.272,
+    "spread": 0.854
+  }
+}

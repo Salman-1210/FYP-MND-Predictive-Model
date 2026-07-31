@@ -1,0 +1,109 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "5.21",
+      "Distance_cm": "7.65",
+      "Amplitude_mv": "4.57",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "3.53",
+      "Distance_cm": "6.66",
+      "Amplitude_mv": "1.97",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "12.30",
+      "Distance_cm": "28.56",
+      "Amplitude_mv": "0.76",
+      "NCV_ms": "36.78"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "14.59",
+      "Distance_cm": "41.55",
+      "Amplitude_mv": "3.38",
+      "NCV_ms": "43.50"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "3.92",
+      "Distance_cm": "6.75",
+      "Amplitude_mv": "0.64",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "14.71",
+      "Distance_cm": "37.30",
+      "Amplitude_mv": "3.31",
+      "NCV_ms": "41.34"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "14.49",
+      "Distance_cm": "9.60",
+      "Amplitude_mv": "0.54",
+      "NCV_ms": "33.81"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "7.89",
+      "Distance_cm": "9.38",
+      "Amplitude_mv": "3.99",
+      "NCV_ms": "49.06"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.82",
+      "Distance_cm": "6.49",
+      "Amplitude_mv": "5.05",
+      "NCV_ms": "-"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Sural",
+      "Recording_Site": "Ankle",
+      "Stimulation_Site": "Calf",
+      "Latency_ms": "2.77",
+      "Distance_cm": "14.33",
+      "Amplitude_uv": "14.04",
+      "NCV_ms": "50.02"
+    },
+    {
+      "Nerve": "Rt. Median",
+      "Recording_Site": "F2",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.57",
+      "Distance_cm": "14.05",
+      "Amplitude_uv": "50.30",
+      "NCV_ms": "58.90"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. Gastroc",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Fasc",
+      "Amp": "None",
+      "Duration": "Long",
+      "Polys": "Increased",
+      "Recruit": "No",
+      "Interference": "RFR"
+    }
+  ]
+}

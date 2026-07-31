@@ -1,0 +1,171 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "8.27",
+      "Distance_cm": "23.22",
+      "Amplitude_mv": "0.43",
+      "NCV_ms": "50.17"
+    },
+    {
+      "Nerve_Muscles": "\"",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "10.16",
+      "Distance_cm": "9.99",
+      "Amplitude_mv": "0.30",
+      "NCV_ms": "56.45"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.96",
+      "Distance_cm": "7.56",
+      "Amplitude_mv": "2.23",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "9.83",
+      "Distance_cm": "11.16",
+      "Amplitude_mv": "2.78",
+      "NCV_ms": "52.41"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.67",
+      "Distance_cm": "7.24",
+      "Amplitude_mv": "1.81",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Median APB",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "4.33",
+      "Distance_cm": "7.38",
+      "Amplitude_mv": "0.49",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "4.34",
+      "Distance_cm": "6.78",
+      "Amplitude_mv": "0.83",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "20.07",
+      "Distance_cm": "8.49",
+      "Amplitude_mv": "1.41",
+      "NCV_ms": "39.01"
+    },
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "15.32",
+      "Distance_cm": "40.36",
+      "Amplitude_mv": "1.96",
+      "NCV_ms": "38.43"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "NR",
+      "Distance_cm": "NR",
+      "Amplitude_mv": "NR",
+      "NCV_ms": "NR"
+    },
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "14.00",
+      "Distance_cm": "35.11",
+      "Amplitude_mv": "1.35",
+      "NCV_ms": "43.26"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "8.42",
+      "Distance_cm": "22.10",
+      "Amplitude_mv": "2.61",
+      "NCV_ms": "50.79"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Lt. Median",
+      "Recording_Site": "F2",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "3.03",
+      "Distance_cm": "14.39",
+      "Amplitude_uv": "28.37",
+      "NCV_ms": "48.48"
+    },
+    {
+      "Nerve": "Rt. Sural",
+      "Recording_Site": "Ankle",
+      "Stimulation_Site": "Calf",
+      "Latency_ms": "2.36",
+      "Distance_cm": "13.21",
+      "Amplitude_uv": "8.58",
+      "NCV_ms": "45.45"
+    },
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.66",
+      "Distance_cm": "12.21",
+      "Amplitude_uv": "22.07",
+      "NCV_ms": "54.68"
+    },
+    {
+      "Nerve": "Rt. Median",
+      "Recording_Site": "F2",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.85",
+      "Distance_cm": "13.19",
+      "Amplitude_uv": "22.11",
+      "NCV_ms": "47.87"
+    },
+    {
+      "Nerve": "Lt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.59",
+      "Distance_cm": "12.20",
+      "Amplitude_uv": "24.59",
+      "NCV_ms": "48.37"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. Orbi. Oris",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Fasc",
+      "Amp": "-",
+      "Duration": "High",
+      "Polys": "Polyphasic",
+      "Recruit": "Reduced",
+      "Interference": "Reduced"
+    },
+    {
+      "Muscles": "Rt. FDI",
+      "Fibs": "++++",
+      "Psw": "++++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "High",
+      "Polys": "Increased",
+      "Recruit": "No",
+      "Interference": "Reduced"
+    }
+  ]
+}

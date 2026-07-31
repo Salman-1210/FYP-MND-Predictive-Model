@@ -1,0 +1,93 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "20.08",
+      "Distance_cm": "8.63",
+      "Amplitude_mv": "1.48",
+      "NCV_ms": "38.53"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "7.95",
+      "Distance_cm": "19.91",
+      "Amplitude_mv": "0.40",
+      "NCV_ms": "60.69"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "5.08",
+      "Distance_cm": "6.85",
+      "Amplitude_mv": "1.75",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Median APB",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "5.03",
+      "Distance_cm": "6.61",
+      "Amplitude_mv": "0.51",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "10.21",
+      "Distance_cm": "10.90",
+      "Amplitude_mv": "2.61",
+      "NCV_ms": "50.76"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "7.87",
+      "Distance_cm": "22.38",
+      "Amplitude_mv": "2.94",
+      "NCV_ms": "59.06"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "4.78",
+      "Distance_cm": "6.65",
+      "Amplitude_mv": "0.82",
+      "NCV_ms": "-"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.68",
+      "Distance_cm": "12.29",
+      "Amplitude_uv": "24.17",
+      "NCV_ms": "55.74"
+    },
+    {
+      "Nerve": "Rt. Sural",
+      "Recording_Site": "Ankle",
+      "Stimulation_Site": "Calf",
+      "Latency_ms": "2.34",
+      "Distance_cm": "12.67",
+      "Amplitude_uv": "9.11",
+      "NCV_ms": "49.18"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. TA",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Nil",
+      "Amp": "High",
+      "Duration": "Increased",
+      "Polys": "Polyphasic",
+      "Recruit": "No",
+      "Interference": "Poor"
+    }
+  ]
+}

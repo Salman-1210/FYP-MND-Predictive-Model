@@ -1,0 +1,167 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "18.87",
+      "Distance_cm": "9.36",
+      "Amplitude_mv": "1.47",
+      "NCV_ms": "40.28"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "5.28",
+      "Distance_cm": "6.86",
+      "Amplitude_mv": "0.73",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "8.46",
+      "Distance_cm": "19.70",
+      "Amplitude_mv": "0.37",
+      "NCV_ms": "52.62"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "8.97",
+      "Distance_cm": "9.99",
+      "Amplitude_mv": "2.53",
+      "NCV_ms": "45.78"
+    },
+    {
+      "Nerve_Muscles": "Lt. Median APB",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "4.92",
+      "Distance_cm": "6.90",
+      "Amplitude_mv": "0.50",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "\"",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "10.69",
+      "Distance_cm": "8.55",
+      "Amplitude_mv": "0.29",
+      "NCV_ms": "55.13"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "NR",
+      "Distance_cm": "NR",
+      "Amplitude_mv": "NR",
+      "NCV_ms": "NR"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "5.01",
+      "Distance_cm": "7.32",
+      "Amplitude_mv": "2.25",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "4.22",
+      "Distance_cm": "7.07",
+      "Amplitude_mv": "2.93",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "15.27",
+      "Distance_cm": "40.77",
+      "Amplitude_mv": "2.03",
+      "NCV_ms": "39.09"
+    },
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "11.99",
+      "Distance_cm": "29.97",
+      "Amplitude_mv": "1.40",
+      "NCV_ms": "42.61"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "5.21",
+      "Distance_cm": "7.64",
+      "Amplitude_mv": "1.70",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "ELBOW",
+      "Latency_ms": "10.22",
+      "Distance_cm": "25.47",
+      "Amplitude_mv": "0.27",
+      "NCV_ms": "50.98"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "7.13",
+      "Distance_cm": "21.93",
+      "Amplitude_mv": "3.05",
+      "NCV_ms": "57.91"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.74",
+      "Distance_cm": "12.87",
+      "Amplitude_uv": "23.27",
+      "NCV_ms": "50.23"
+    },
+    {
+      "Nerve": "Rt. Median",
+      "Recording_Site": "F2",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "3.18",
+      "Distance_cm": "14.93",
+      "Amplitude_uv": "20.36",
+      "NCV_ms": "46.14"
+    },
+    {
+      "Nerve": "Lt. Median",
+      "Recording_Site": "F2",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.95",
+      "Distance_cm": "12.78",
+      "Amplitude_uv": "31.89",
+      "NCV_ms": "49.46"
+    },
+    {
+      "Nerve": "Lt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.71",
+      "Distance_cm": "12.53",
+      "Amplitude_uv": "28.73",
+      "NCV_ms": "46.64"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. TA",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Nil",
+      "Amp": "High",
+      "Duration": "Long",
+      "Polys": "Long",
+      "Recruit": "Reduced",
+      "Interference": "RFR"
+    }
+  ]
+}

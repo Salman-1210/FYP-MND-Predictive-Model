@@ -1,0 +1,109 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "6.80",
+      "Distance_cm": "23.79",
+      "Amplitude_mv": "4.18",
+      "NCV_ms": "51.66"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "15.60",
+      "Distance_cm": "9.25",
+      "Amplitude_mv": "0.55",
+      "NCV_ms": "36.80"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "7.68",
+      "Distance_cm": "9.11",
+      "Amplitude_mv": "3.88",
+      "NCV_ms": "50.11"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "15.82",
+      "Distance_cm": "9.38",
+      "Amplitude_mv": "0.31",
+      "NCV_ms": "39.43"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.12",
+      "Distance_cm": "7.22",
+      "Amplitude_mv": "0.70",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.89",
+      "Distance_cm": "6.71",
+      "Amplitude_mv": "5.57",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "12.79",
+      "Distance_cm": "32.45",
+      "Amplitude_mv": "0.55",
+      "NCV_ms": "34.23"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "3.01",
+      "Distance_cm": "7.21",
+      "Amplitude_mv": "5.18",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "12.83",
+      "Distance_cm": "30.11",
+      "Amplitude_mv": "0.77",
+      "NCV_ms": "38.03"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.20",
+      "Distance_cm": "14.13",
+      "Amplitude_uv": "36.46",
+      "NCV_ms": "60.20"
+    },
+    {
+      "Nerve": "Rt. Sural",
+      "Recording_Site": "Ankle",
+      "Stimulation_Site": "Calf",
+      "Latency_ms": "2.61",
+      "Distance_cm": "14.32",
+      "Amplitude_uv": "12.29",
+      "NCV_ms": "48.14"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. FDI",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Fasc",
+      "Amp": "None",
+      "Duration": "Long",
+      "Polys": "Increased",
+      "Recruit": "No",
+      "Interference": "Reduced"
+    }
+  ]
+}

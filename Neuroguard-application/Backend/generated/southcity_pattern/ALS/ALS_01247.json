@@ -1,0 +1,85 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "8.20",
+      "Distance_cm": "19.93",
+      "Amplitude_mv": "0.41",
+      "NCV_ms": "60.10"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "4.44",
+      "Distance_cm": "6.99",
+      "Amplitude_mv": "0.79",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "4.17",
+      "Distance_cm": "7.49",
+      "Amplitude_mv": "3.50",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.78",
+      "Distance_cm": "7.45",
+      "Amplitude_mv": "2.38",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "13.58",
+      "Distance_cm": "35.04",
+      "Amplitude_mv": "1.45",
+      "NCV_ms": "40.36"
+    },
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "20.20",
+      "Distance_cm": "8.71",
+      "Amplitude_mv": "1.46",
+      "NCV_ms": "44.09"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Sural",
+      "Recording_Site": "Ankle",
+      "Stimulation_Site": "Calf",
+      "Latency_ms": "2.83",
+      "Distance_cm": "12.12",
+      "Amplitude_uv": "8.90",
+      "NCV_ms": "49.83"
+    },
+    {
+      "Nerve": "Rt. Median",
+      "Recording_Site": "F2",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "3.30",
+      "Distance_cm": "15.31",
+      "Amplitude_uv": "20.86",
+      "NCV_ms": "43.67"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. TA",
+      "Fibs": "++++",
+      "Psw": "++++",
+      "Others": "Fasc",
+      "Amp": "High",
+      "Duration": "Increased",
+      "Polys": "Increased",
+      "Recruit": "No",
+      "Interference": "Reduced"
+    }
+  ]
+}

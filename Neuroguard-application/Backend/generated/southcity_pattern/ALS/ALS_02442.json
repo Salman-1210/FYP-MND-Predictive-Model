@@ -1,0 +1,85 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Lt. Median APB",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "4.86",
+      "Distance_cm": "6.72",
+      "Amplitude_mv": "0.51",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "19.60",
+      "Distance_cm": "8.25",
+      "Amplitude_mv": "1.26",
+      "NCV_ms": "42.74"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "7.85",
+      "Distance_cm": "20.58",
+      "Amplitude_mv": "3.00",
+      "NCV_ms": "57.01"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "10.53",
+      "Distance_cm": "10.17",
+      "Amplitude_mv": "2.72",
+      "NCV_ms": "47.19"
+    },
+    {
+      "Nerve_Muscles": "\"",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "10.74",
+      "Distance_cm": "8.63",
+      "Amplitude_mv": "0.28",
+      "NCV_ms": "47.59"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "5.20",
+      "Distance_cm": "6.50",
+      "Amplitude_mv": "2.29",
+      "NCV_ms": "-"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Sural",
+      "Recording_Site": "Ankle",
+      "Stimulation_Site": "Calf",
+      "Latency_ms": "2.63",
+      "Distance_cm": "13.84",
+      "Amplitude_uv": "8.59",
+      "NCV_ms": "48.45"
+    },
+    {
+      "Nerve": "Lt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.50",
+      "Distance_cm": "13.81",
+      "Amplitude_uv": "24.08",
+      "NCV_ms": "53.49"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. FDI",
+      "Fibs": "++++",
+      "Psw": "++++",
+      "Others": "Fasc",
+      "Amp": "None",
+      "Duration": "High",
+      "Polys": "Polyphasic",
+      "Recruit": "Reduced",
+      "Interference": "Poor"
+    }
+  ]
+}

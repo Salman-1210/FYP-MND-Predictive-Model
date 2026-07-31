@@ -1,0 +1,53 @@
+{
+  "report_id": "AWAJI_PMA_01328",
+  "criteria_type": "awaji",
+  "true_label": "PMA",
+  "variant_type": "mild",
+  "lab_id": "LAB_D",
+  "format_type": "format_B",
+  "Motor_NCS": [
+    {
+      "nerve": "Tibial (AH)",
+      "dist_cm": 9.0,
+      "lat_ms": 9.07,
+      "cmap_mV": 2.95,
+      "ncv_mps": 32.64
+    },
+    {
+      "nerve": "Median (APB)",
+      "dist_cm": 7.0,
+      "lat_ms": 7.44,
+      "cmap_mV": 4.3,
+      "ncv_mps": 40.27
+    }
+  ],
+  "Sensory_NCS": [
+    {
+      "nerve": "Median (SNAP)",
+      "dist_cm": 14.0,
+      "lat_ms": 2.83,
+      "snap_uV": 31.7,
+      "ncv_mps": 53.38
+    }
+  ],
+  "EMG_Interpretation": {
+    "active_denervation": true,
+    "chronic_neurogenic_changes": true,
+    "fasciculations": true,
+    "regions_involved": [
+      "cervical",
+      "lumbosacral"
+    ]
+  },
+  "criteria_meta": {
+    "LMN_evidence_weight": "high",
+    "fasciculations_count_as_LMN": true
+  },
+  "latent_factors_debug": {
+    "sev": 0.679,
+    "lmn": 0.748,
+    "umn": 0.046,
+    "bulbar": 0.196,
+    "spread": 0.678
+  }
+}

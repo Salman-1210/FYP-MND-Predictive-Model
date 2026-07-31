@@ -1,0 +1,166 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.02",
+      "Distance_cm": "7.29",
+      "Amplitude_mv": "1.75",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "3.36",
+      "Distance_cm": "7.49",
+      "Amplitude_mv": "5.42",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "14.68",
+      "Distance_cm": "9.42",
+      "Amplitude_mv": "0.55",
+      "NCV_ms": "36.29"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "12.94",
+      "Distance_cm": "30.15",
+      "Amplitude_mv": "0.74",
+      "NCV_ms": "38.32"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "6.82",
+      "Distance_cm": "22.28",
+      "Amplitude_mv": "4.00",
+      "NCV_ms": "52.51"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "15.39",
+      "Distance_cm": "43.69",
+      "Amplitude_mv": "3.25",
+      "NCV_ms": "43.83"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "12.23",
+      "Distance_cm": "30.77",
+      "Amplitude_mv": "0.53",
+      "NCV_ms": "36.21"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "ELBOW",
+      "Latency_ms": "7.13",
+      "Distance_cm": "22.91",
+      "Amplitude_mv": "5.05",
+      "NCV_ms": "50.90"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "2.70",
+      "Distance_cm": "7.61",
+      "Amplitude_mv": "5.64",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.38",
+      "Distance_cm": "6.65",
+      "Amplitude_mv": "5.35",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.77",
+      "Distance_cm": "6.52",
+      "Amplitude_mv": "5.01",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "9.03",
+      "Distance_cm": "9.49",
+      "Amplitude_mv": "4.59",
+      "NCV_ms": "49.92"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.44",
+      "Distance_cm": "6.38",
+      "Amplitude_mv": "0.65",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "15.64",
+      "Distance_cm": "38.29",
+      "Amplitude_mv": "3.35",
+      "NCV_ms": "39.88"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "17.08",
+      "Distance_cm": "9.44",
+      "Amplitude_mv": "0.29",
+      "NCV_ms": "40.25"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Sural",
+      "Recording_Site": "Ankle",
+      "Stimulation_Site": "Calf",
+      "Latency_ms": "2.56",
+      "Distance_cm": "14.73",
+      "Amplitude_uv": "11.80",
+      "NCV_ms": "48.79"
+    },
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.03",
+      "Distance_cm": "13.60",
+      "Amplitude_uv": "41.00",
+      "NCV_ms": "68.27"
+    },
+    {
+      "Nerve": "Rt. Median",
+      "Recording_Site": "F2",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.49",
+      "Distance_cm": "14.87",
+      "Amplitude_uv": "46.74",
+      "NCV_ms": "52.62"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. Biceps",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "High",
+      "Polys": "Long",
+      "Recruit": "Reduced",
+      "Interference": "Poor"
+    }
+  ]
+}

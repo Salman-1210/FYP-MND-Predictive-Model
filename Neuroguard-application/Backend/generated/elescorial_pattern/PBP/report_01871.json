@@ -1,0 +1,54 @@
+{
+  "report_id": "EL_ESCORIAL_PBP_01871",
+  "criteria_type": "el_escorial",
+  "true_label": "PBP",
+  "variant_type": "mild",
+  "lab_id": "LAB_C",
+  "format_type": "format_B",
+  "Motor_NCS": [
+    {
+      "nerve": "Peroneal (EDB)",
+      "dist_cm": 9.0,
+      "lat_ms": 7.56,
+      "cmap_mV": 3.1,
+      "ncv_mps": 28.08
+    },
+    {
+      "nerve": "Ulnar (ADM)",
+      "dist_cm": 7.0,
+      "lat_ms": 6.64,
+      "cmap_mV": 1.48,
+      "ncv_mps": 33.71
+    }
+  ],
+  "Sensory_NCS": [
+    {
+      "nerve": "Ulnar (SNAP)",
+      "dist_cm": "NR",
+      "lat_ms": 2.23,
+      "snap_uV": 28.42,
+      "ncv_mps": 60.63
+    }
+  ],
+  "EMG_Interpretation": {
+    "active_denervation": true,
+    "chronic_neurogenic_changes": true,
+    "fasciculations": true,
+    "regions_involved": [
+      "bulbar",
+      "cervical",
+      "lumbosacral"
+    ]
+  },
+  "criteria_meta": {
+    "UMN_signs_documented": false,
+    "LMN_regions_count": 2
+  },
+  "latent_factors_debug": {
+    "sev": 0.653,
+    "lmn": 0.69,
+    "umn": 0.293,
+    "bulbar": 0.877,
+    "spread": 0.351
+  }
+}
