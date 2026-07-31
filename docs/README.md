@@ -35,7 +35,7 @@ Website: www.ssuet.edu.pk
 ---
 
 ## Acknowledgments
-We thank AllaH Almighty for this whole journey.
+We thank Allah Almighty for this whole journey.
 
 We extend our sincere gratitude to Dr. Huma Hassan Rizvi for her continuous guidance, valuable feedback, and mentorship throughout this project. Her expertise in machine learning and healthcare informatics significantly shaped the direction and quality of our work.
 
