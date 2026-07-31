@@ -499,7 +499,6 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 ---
 
 <p align="center">
-  <b>Built with ❤️ for those fighting Motor Neuron Disease</b><br>
+  <b>Built for those brave souis fighting Motor Neuron Disease</b><br>
   <i>Early detection saves lives.</i>
 </p>
->>>>>>> a8d4d4be229aaee78e5c5ee986b18df74bc89766
