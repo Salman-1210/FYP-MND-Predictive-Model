@@ -25,7 +25,7 @@
 
 ## Internal Advisor
 
-**Prof.Dr. Huma Hassan Rizvi**
+**Prof. Dr. Huma Hassan Rizvi**
 
 Department of Computer Engineering  
 Sir Syed University of Engineering & Technology
