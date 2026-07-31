@@ -1,6 +1,19 @@
 Final Year Project - AI-powered predictive modeling for Motor Neuron Disease (ALS, PBP, PMA) using Random Forest with validation. Achieves 94% accuracy on clinical NCV data.
 =======
-# FYP-MND-Predictive-Model
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Random%20Forest-94%25%20Accuracy-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/AUROC-0.9890-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" />
+</p>
+
+<p align="center">
+  <b>AI-Powered Predictive Modeling for Motor Neuron Disease (MND)</b><br>
+  Early diagnosis, risk assessment, and patient care platform for ALS, PBP, and PMA.
+</p>
+
+---
 ## Team Members
 
 | Name | Roll Number | Email |
@@ -29,20 +42,7 @@ Main University Road, Karachi, 75300, Pakistan
 Phone: +92 21 3498-8000  
 Website: www.ssuet.edu.pk
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/Random%20Forest-94%25%20Accuracy-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/AUROC-0.9890-orange?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" />
-</p>
 
-<p align="center">
-  <b>AI-Powered Predictive Modeling for Motor Neuron Disease (MND)</b><br>
-  Early diagnosis, risk assessment, and patient care platform for ALS, PBP, and PMA.
-</p>
-
----
 
 ## 📑 Table of Contents
 
