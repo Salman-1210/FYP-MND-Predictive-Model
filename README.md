@@ -1,3 +1,5 @@
+Final Year Project - AI-powered predictive modeling for Motor Neuron Disease (ALS, PBP, PMA) using Random Forest with validation. Achieves 94% accuracy on clinical NCV data.
+=======
 # FYP-MND-Predictive-Model
 ## Team Members
 
@@ -26,10 +28,6 @@ Sir Syed University of Engineering & Technology
 Main University Road, Karachi, 75300, Pakistan  
 Phone: +92 21 3498-8000  
 Website: www.ssuet.edu.pk
-
-Final Year Project - AI-powered predictive modeling for Motor Neuron Disease (ALS, PBP, PMA) using Random Forest with validation. Achieves 94% accuracy on clinical NCV data.
-=======
-#  FYP-MND-Predictive-Model
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python&logoColor=white" />
