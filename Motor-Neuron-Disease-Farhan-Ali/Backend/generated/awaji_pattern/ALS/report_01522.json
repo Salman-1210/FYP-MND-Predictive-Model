@@ -1,0 +1,53 @@
+{
+  "report_id": "AWAJI_ALS_01522",
+  "criteria_type": "awaji",
+  "true_label": "ALS",
+  "variant_type": "severe",
+  "lab_id": "LAB_D",
+  "format_type": "format_A",
+  "Motor_NCS": [
+    {
+      "nerve": "Median (APB)",
+      "dist_cm": 7.0,
+      "lat_ms": 7.75,
+      "cmap_mV": 0.77,
+      "ncv_mps": 34.21
+    },
+    {
+      "nerve": "Tibial (AH)",
+      "dist_cm": 9.0,
+      "lat_ms": 9.69,
+      "cmap_mV": 0.45,
+      "ncv_mps": 21.86
+    }
+  ],
+  "Sensory_NCS": [
+    {
+      "nerve": "Median (SNAP)",
+      "dist_cm": 14.0,
+      "lat_ms": 2.56,
+      "snap_uV": 28.6,
+      "ncv_mps": 63.69
+    }
+  ],
+  "EMG_Interpretation": {
+    "active_denervation": true,
+    "chronic_neurogenic_changes": true,
+    "fasciculations": true,
+    "regions_involved": [
+      "cervical",
+      "lumbosacral"
+    ]
+  },
+  "criteria_meta": {
+    "LMN_evidence_weight": "high",
+    "fasciculations_count_as_LMN": true
+  },
+  "latent_factors_debug": {
+    "sev": 0.832,
+    "lmn": 0.911,
+    "umn": 0.793,
+    "bulbar": 0.401,
+    "spread": 0.63
+  }
+}

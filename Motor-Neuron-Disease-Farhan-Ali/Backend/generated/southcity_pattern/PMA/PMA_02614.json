@@ -1,0 +1,166 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "2.46",
+      "Distance_cm": "6.63",
+      "Amplitude_mv": "4.93",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "14.22",
+      "Distance_cm": "38.72",
+      "Amplitude_mv": "3.40",
+      "NCV_ms": "39.13"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "D. ELBOW",
+      "Latency_ms": "6.60",
+      "Distance_cm": "22.71",
+      "Amplitude_mv": "3.90",
+      "NCV_ms": "59.55"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "2.79",
+      "Distance_cm": "6.54",
+      "Amplitude_mv": "5.40",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "15.08",
+      "Distance_cm": "9.70",
+      "Amplitude_mv": "0.63",
+      "NCV_ms": "38.46"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "17.39",
+      "Distance_cm": "9.17",
+      "Amplitude_mv": "0.28",
+      "NCV_ms": "39.27"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "ELBOW",
+      "Latency_ms": "7.89",
+      "Distance_cm": "24.99",
+      "Amplitude_mv": "5.21",
+      "NCV_ms": "53.53"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "3.96",
+      "Distance_cm": "6.45",
+      "Amplitude_mv": "0.69",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "4.63",
+      "Distance_cm": "6.52",
+      "Amplitude_mv": "5.19",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "3.82",
+      "Distance_cm": "6.74",
+      "Amplitude_mv": "1.79",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "5.24",
+      "Distance_cm": "7.03",
+      "Amplitude_mv": "5.16",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "14.37",
+      "Distance_cm": "29.79",
+      "Amplitude_mv": "0.47",
+      "NCV_ms": "32.67"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "8.31",
+      "Distance_cm": "8.37",
+      "Amplitude_mv": "4.05",
+      "NCV_ms": "47.39"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "KNEE",
+      "Latency_ms": "14.34",
+      "Distance_cm": "44.33",
+      "Amplitude_mv": "3.15",
+      "NCV_ms": "48.20"
+    },
+    {
+      "Nerve_Muscles": "Lt. Peroneal EDB",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "12.29",
+      "Distance_cm": "30.16",
+      "Amplitude_mv": "0.80",
+      "NCV_ms": "38.66"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Sural",
+      "Recording_Site": "Ankle",
+      "Stimulation_Site": "Calf",
+      "Latency_ms": "2.91",
+      "Distance_cm": "13.06",
+      "Amplitude_uv": "12.52",
+      "NCV_ms": "54.42"
+    },
+    {
+      "Nerve": "Rt. Median",
+      "Recording_Site": "F2",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.54",
+      "Distance_cm": "13.66",
+      "Amplitude_uv": "51.10",
+      "NCV_ms": "60.93"
+    },
+    {
+      "Nerve": "Rt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.15",
+      "Distance_cm": "15.18",
+      "Amplitude_uv": "39.58",
+      "NCV_ms": "64.33"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. VL",
+      "Fibs": "++",
+      "Psw": "++",
+      "Others": "Nil",
+      "Amp": "None",
+      "Duration": "Increased",
+      "Polys": "Increased",
+      "Recruit": "Reduced",
+      "Interference": "Reduced"
+    }
+  ]
+}

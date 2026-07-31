@@ -2,10 +2,10 @@
 
 import { useState, useEffect, useMemo } from "react"; 
 import emailjs from '@emailjs/browser'; 
-import { BrainCircuit, Globe, LogOut, Home } from "lucide-react";
+import { Globe, LogOut, Home } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion"; 
 
-// --- IMPORTS FROM COMPONENTS ---
+// --- COMPONENTS ---
 import AdminDashboard from "../components/AdminDashboard.jsx";
 import PortalSelect from "../components/PortalSelect.jsx";
 import AuthForm from "../components/AuthForm.jsx";
@@ -14,18 +14,17 @@ import PatientDashboard from "../components/PatientDashboard.jsx";
 import DoctorDashboard from "../components/DoctorDashboard.jsx";
 import GlobalModals from "../components/GlobalModals.jsx";
 import ChatBot from "../components/ChatBot.jsx";
+import Exercises from "../components/Exercises.jsx";
 
 import { TRANSLATIONS, ALL_QUESTIONS } from "./utils/constants";
 
 export default function MNDApp() {
   const API_URL = "http://127.0.0.1:8000"; 
 
-  // --- EMAILJS CREDENTIALS ---
   const SERVICE_ID = "service_7xz5xxn";
   const PUBLIC_KEY = "E0kMjrhVjc96ySAzv";
   const TEMPLATE_ID_APPOINT = "template_cve9ewl"; 
 
-  // --- STATE MANAGEMENT ---
   const [view, setView] = useState("portal_select"); 
   const [selectedRole, setSelectedRole] = useState("patient"); 
   const [currentUser, setCurrentUser] = useState(null);
@@ -58,7 +57,20 @@ export default function MNDApp() {
   const [appointDate, setAppointDate] = useState("");
   const [appointMsg, setAppointMsg] = useState("");
 
-  // --- 1. RESET LOGIC (Autofill Fix) ---
+  // Load user from localStorage on mount
+  useEffect(() => {
+    const savedUser = localStorage.getItem("currentUser");
+    if (savedUser) {
+      try {
+        const parsed = JSON.parse(savedUser);
+        setCurrentUser(parsed);
+        console.log("📧 [MNDApp] Loaded user from localStorage:", parsed.email);
+      } catch (e) {
+        console.error("Failed to parse saved user", e);
+      }
+    }
+  }, []);
+
   useEffect(() => {
     setLoginEmail("");
     setLoginPassword("");
@@ -69,9 +81,8 @@ export default function MNDApp() {
     setHospitalName("");
     setLicenseId("");
     setSpecialty("");
-  }, [view, selectedRole]);
+  }, [view, selectedRole, authMode]);
 
-  // --- DYNAMIC BACKGROUND LOGIC ---
   const getBgImage = () => {
     if (view === 'patient_dashboard' || view === 'screening' || (view === 'auth' && selectedRole === 'patient')) {
         return "https://media.istockphoto.com/id/2158873057/photo/microscopic-of-neural-network-brain-cells.jpg?s=612x612&w=0&k=20&c=ry6qsW3QEZRmlHoj7klS48-OH_vOwiv_PTBgvH8yyr4="; 
@@ -82,36 +93,35 @@ export default function MNDApp() {
     if (view === 'admin_dashboard' || (view === 'auth' && selectedRole === 'admin')) {
         return "https://media.istockphoto.com/id/2226751694/photo/businessperson-using-laptop-with-digital-invoice-and-finance-icons-concept-of-electronic.jpg?s=612x612&w=0&k=20&c=d1-Xm9sjbPUicNx-l5MUJBe7nquDq8qPRxNdXB_uIVc="; 
     }
-    return "https://media.istockphoto.com/id/1398176399/vector/graphic-illustration-of-brain-organ-protected-by-a-shield-healthcare-concept-background-with.jpg?s=1024x1024&w=is&k=20&c=1gIcpcHP8A8vtCNcrI9OY7mC4cT6l03yLoHKU7Ek_k8="; 
+    return "https://www.shutterstock.com/image-photo/stethoscope-human-brain-model-neurology-260nw-2716494483.jpg"; 
   };
 
-  // --- EFFECTS ---
   useEffect(() => {
     const fetchData = () => {
-        if (currentUser?.role === "doctor") fetchPatientsForDoctor();
+        if (currentUser?.role === "doctor") fetchPatientsForDoctor(currentUser.email);
         else if (currentUser?.role === "admin") {
             fetchAdminStats();
             fetchAllUsers();
         }
     };
     fetchData();
-    const interval = setInterval(fetchData, 3000); 
+    const interval = setInterval(fetchData, 10000);
     return () => clearInterval(interval);
   }, [currentUser, view]);
 
-  // --- API CALLS ---
-  const fetchPatientsForDoctor = async () => {
+  const fetchPatientsForDoctor = async (doctorEmail) => {
+      if (!doctorEmail) return;
       try {
-          const res = await fetch(`${API_URL}/doctor/patients`);
+          const res = await fetch(`${API_URL}/doctor/patients?email=${doctorEmail}`);
           if(res.ok) setDoctorPatients(await res.json());
-      } catch (e) { console.error("Error", e); }
+      } catch (e) { console.error("Fetch Patients Error", e); }
   };
 
   const fetchAdminStats = async () => {
       try {
           const res = await fetch(`${API_URL}/admin/stats`);
           if(res.ok) setAdminStats(await res.json());
-      } catch (e) { console.error("Error", e); }
+      } catch (e) { console.error("Admin Stats Error", e); }
   };
 
   const fetchAllUsers = async () => {
@@ -121,21 +131,20 @@ export default function MNDApp() {
       } catch (e) { console.error(e); }
   };
 
-  const handleUpdateUserStatus = async (userId, updateData) => {
-    try {
-      const res = await fetch(`${API_URL}/admin/users/${userId}/status`, {
-        method: 'PATCH',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updateData)
-      });
-      if (res.ok) {
-        setAllUsers(prev => prev.map(u => u.id === userId ? { ...u, ...updateData } : u));
-        alert("Medical Professional Verified Successfully!");
+  const getCalculatedRisk = (finalAnswers) => {
+    let score = 0;
+    const data = finalAnswers || answers;
+    ALL_QUESTIONS.forEach(q => {
+      if (q.mnd && data[q.id]) {
+        if (data[q.id] === "Yes") score += 2;
+        if (data[q.id] === "Sometimes") score += 1;
       }
-    } catch (e) { console.error("Failed to update status", e); }
+    });
+    if (score >= 6) return "High Risk";
+    if (score >= 3) return "Moderate Risk";
+    return "Low Risk";
   };
 
-  // --- AUTHENTICATION HANDLER ---
   const handleAuth = async () => {
     setIsLoading(true);
     setErrorMsg("");
@@ -144,8 +153,13 @@ export default function MNDApp() {
       const payload = authMode === "login" 
           ? { email: loginEmail, password: loginPassword, role: selectedRole } 
           : { 
-              full_name: name, email, password, 
-              role: selectedRole, hospital: hospitalName, specialty, license_id: licenseId 
+              full_name: name, 
+              email: email, 
+              password: password, 
+              role: selectedRole, 
+              hospital: hospitalName, 
+              specialty: specialty, 
+              license_id: licenseId
             };
 
       const res = await fetch(`${API_URL}${endpoint}`, {
@@ -158,20 +172,54 @@ export default function MNDApp() {
       if (!res.ok) throw new Error(data.detail || "Authentication Failed");
 
       if (authMode === "register") {
-          alert(selectedRole === "doctor" ? "Registration Successful! Account sent for Admin Approval." : "Registration Successful! Please login.");
-          setAuthMode("login");
-          setLoginEmail(""); 
+          if (selectedRole === "patient") {
+              const newUser = { ...data.user, email: email, name: name };
+              setCurrentUser(newUser);
+              localStorage.setItem("currentUser", JSON.stringify(newUser));
+              localStorage.setItem("userEmail", email);
+              
+              setStep(0);
+              setAnswers({});
+              setView("screening"); 
+              alert("Registration Successful! Please complete your medical screening.");
+          } else {
+              alert("Registration Successful! Please login.");
+              setAuthMode("login");
+              setLoginEmail(email);
+          }
           setIsLoading(false);
           return;
       }
 
-      // Security Check: Block unverified doctors
       if (data.user.role === "doctor" && !data.user.is_verified) {
           throw new Error("Access Restricted: Your account is pending Admin approval.");
       }
 
-      setCurrentUser({ ...data.user });
-      setView(data.user.role === "admin" ? "admin_dashboard" : data.user.role === "doctor" ? "doctor_dashboard" : "patient_dashboard");
+      const loggedInUser = { 
+          ...data.user, 
+          email: data.user?.email || loginEmail,
+          name: data.user?.name || data.user?.full_name || loginEmail.split('@')[0]
+      };
+      
+      setCurrentUser(loggedInUser);
+      localStorage.setItem("currentUser", JSON.stringify(loggedInUser));
+      localStorage.setItem("userEmail", loggedInUser.email);
+      console.log("✅ [LOGIN] Saved user to localStorage:", loggedInUser.email);
+
+      if (data.user.role === "patient") {
+          if (data.last_analysis) {
+            setUploadAnalysis(data.last_analysis);
+          } else if (data.user?.analysis) {
+            setUploadAnalysis(data.user.analysis);
+          } else {
+            setUploadAnalysis(null);
+          }
+          setView("patient_dashboard"); 
+      } else if (data.user.role === "doctor") {
+          setView("doctor_dashboard");
+      } else {
+          setView("admin_dashboard");
+      }
 
     } catch (err) { 
       setErrorMsg(err.message); 
@@ -180,97 +228,37 @@ export default function MNDApp() {
     }
   };
 
+  // 🔥🔥🔥 FIX: handleAnswer sirf state update karega, backend submit nahi 🔥🔥🔥
+  const handleAnswer = (value) => {
+    const questions = ALL_QUESTIONS.filter(q => !q.skipIf || !q.skipIf(answers));
+    const currentQuestion = questions[step];
+    
+    const newAnswers = { ...answers, [currentQuestion.id]: value };
+    setAnswers(newAnswers);
+
+    if (step < questions.length - 1) {
+      setStep(step + 1);
+    }
+    // Last question ka backend submit Screening.jsx handle karegi
+  };
+
   const handleLogout = () => {
-      setCurrentUser(null); setView("portal_select"); setStep(0); setUploadAnalysis(null); setAnswers({});
+      setCurrentUser(null);
+      setView("portal_select");
+      setStep(0);
+      setAnswers({});
+      setUploadAnalysis(null);
+      localStorage.removeItem("currentUser");
+      localStorage.removeItem("userEmail");
   };
 
   const handleGlobalBack = () => {
       if(currentUser) {
-          if(confirm("Go back to Main Menu? You will be logged out.")) handleLogout();
+          if(confirm("Log out and return to home?")) handleLogout();
       } else {
-          setView("portal_select"); setStep(0); setAnswers({});
+          setView("portal_select");
+          setStep(0);
       }
-  };
-
-  const handleMarkAsSeen = async (screeningId) => {
-    try {
-      const res = await fetch(`${API_URL}/doctor/mark-seen/${screeningId}`, { 
-        method: 'PUT',
-        headers: { "Content-Type": "application/json" }
-      });
-      if (res.ok) {
-        setDoctorPatients((prev) =>
-          prev.map((p) => (p.id === screeningId ? { ...p, status: "checked" } : p))
-        );
-      }
-    } catch (e) { console.error("Status update failed", e); }
-  };
-
-  const handleDeleteUser = async (userId) => {
-    if(!confirm("Are you sure?")) return;
-    try {
-        const res = await fetch(`${API_URL}/admin/users/${userId}`, { method: 'DELETE' });
-        if(res.ok) setAllUsers(allUsers.filter(u => u.id !== userId));
-    } catch(e) { console.error(e); }
-  };
-
-  const handleUpdateUser = async () => {
-    try {
-        const res = await fetch(`${API_URL}/admin/users/${editingUser.id}`, { 
-            method: 'PUT', headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({name: editingUser.name, role: editingUser.role})
-        });
-        if(res.ok) {
-            setAllUsers(allUsers.map(u => u.id === editingUser.id ? { ...u, name: editingUser.name, role: editingUser.role, full_name: editingUser.name } : u));
-            setModalType(null);
-            alert("User updated successfully!");
-        }
-    } catch(e) { alert("Update failed"); }
-  };
-
-  const handleForgotPassword = async () => {
-    if(!forgotEmail) return alert("Please enter email");
-    try {
-        const res = await fetch(`${API_URL}/forgot-password`, {
-            method: "POST", headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({email: forgotEmail})
-        });
-        if(res.ok) { alert("Password reset link sent!"); setShowForgotModal(false); }
-    } catch(e) { alert("Error sending reset link."); }
-  };
-
-  const handleFileUpload = async () => {
-    if(!selectedFile) return;
-    setIsLoading(true);
-    const formData = new FormData();
-    formData.append("file", selectedFile);
-    formData.append("email", currentUser.email);
-    try {
-      const res = await fetch(`${API_URL}/upload-report`, { method: "POST", body: formData });
-      const data = await res.json();
-      if(data.success) setUploadAnalysis(data.analysis);
-    } catch (err) { alert("Upload/OCR analysis failed. Please try again."); } 
-    finally { setIsLoading(false); }
-  };
-
-  const sendAppointmentEmail = async () => {
-    setIsLoading(true);
-    try {
-      const templateParams = { to_email: selectedPatient.email, to_name: selectedPatient.name, doctor_name: currentUser.name, date_time: appointDate, message: appointMsg };
-      await emailjs.send(SERVICE_ID, TEMPLATE_ID_APPOINT, templateParams, PUBLIC_KEY);
-      alert(`Appointment notification sent to ${selectedPatient.name}!`); 
-      setModalType(null);
-    } catch(e) { alert("Failed to send email."); } 
-    finally { setIsLoading(false); }
-  };
-
-  const questions = useMemo(() => ALL_QUESTIONS.filter(q => !q.skipIf || !q.skipIf(answers)), [answers]);
-
-  const handleAnswer = (value) => {
-    const newAnswers = { ...answers, [questions[step].id]: value };
-    setAnswers(newAnswers);
-    if (step < questions.length - 1) setStep(step + 1);
-    else { setView("auth"); setAuthMode("register"); }
   };
 
   return (
@@ -285,17 +273,17 @@ export default function MNDApp() {
       <div className="relative z-20 w-full max-w-7xl">
         <motion.div initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="bg-white/80 backdrop-blur-md shadow-lg border border-white/50 p-4 rounded-3xl flex flex-col md:flex-row justify-between items-center mb-8 sticky top-4 z-50">
             <div onClick={handleGlobalBack} className="flex items-center gap-3 cursor-pointer">
-              <div className="bg-gradient-to-tr from-blue-600 to-indigo-600 p-2.5 rounded-xl text-white shadow-lg"><BrainCircuit className="h-7 w-7" /></div>
-              <div>
-                <h1 className="font-extrabold text-2xl tracking-tight text-slate-900">NeuroGuard AI</h1>
-                <p className="text-[10px] uppercase font-bold text-slate-500 tracking-widest mt-1">MND Detection System</p>
-              </div>
+                <img src="/images/mnd logo.png" alt="Logo" className="h-12 w-auto object-contain" />
+                <div>
+                  <h1 className="font-extrabold text-2xl tracking-tight text-slate-900">NeuroGuard AI</h1>
+                  <p className="text-[10px] uppercase font-bold text-slate-500 tracking-widest mt-1">MND PREDICTIVE PLATFORM</p>
+                </div>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mt-4 md:mt-0">
                 {currentUser && (
-                    <div className="hidden md:flex flex-col text-right mr-2 bg-white/50 px-4 py-1 rounded-lg">
+                    <div className="flex flex-col text-right mr-2 bg-white/50 px-4 py-1 rounded-lg">
                         <span className="text-[10px] font-bold text-slate-400 uppercase">Logged in</span>
-                        <span className="text-sm font-bold text-slate-800">{currentUser.name}</span>
+                        <span className="text-sm font-bold text-slate-800">{currentUser.name || currentUser.full_name}</span>
                     </div>
                 )}
                 {view !== "portal_select" && (
@@ -310,21 +298,176 @@ export default function MNDApp() {
         </motion.div>
 
         <AnimatePresence mode="wait">
-            {view === "portal_select" && <PortalSelect setView={setView} setSelectedRole={setSelectedRole} setAuthMode={setAuthMode} />}
-            {view === "screening" && <Screening step={step} questions={questions} language={language} handleAnswer={handleAnswer} setView={setView} />}
-            {view === "auth" && (
-              <AuthForm 
-                {...{authMode, setAuthMode, setView, selectedRole, name, setName, hospitalName, setHospitalName, 
-                loginEmail, setLoginEmail, email, setEmail, loginPassword, setLoginPassword, password, setPassword, 
-                isLoading, errorMsg, handleAuth, setShowForgotModal, specialty, setSpecialty, licenseId, setLicenseId}} 
+            {view === "portal_select" && (
+              <PortalSelect 
+                key="portal_select"
+                setView={(v) => {
+                  if(v === "screening") {
+                    setSelectedRole("patient");
+                    setAuthMode("login");
+                    setView("auth");
+                  } else {
+                    setView(v);
+                  }
+                }} 
+                setSelectedRole={setSelectedRole} 
+                setAuthMode={setAuthMode} 
               />
             )}
-            {view === "patient_dashboard" && <PatientDashboard user={currentUser} uploadAnalysis={uploadAnalysis} setUploadAnalysis={setUploadAnalysis} selectedFile={selectedFile} setSelectedFile={setSelectedFile} handleFileUpload={handleFileUpload} isLoading={isLoading} />}
-            {view === "doctor_dashboard" && <DoctorDashboard doctorInfo={currentUser} doctorPatients={doctorPatients} setSelectedPatient={setSelectedPatient} setModalType={setModalType} handleMarkAsSeen={handleMarkAsSeen} />}
-            {view === "admin_dashboard" && adminStats && <AdminDashboard adminStats={adminStats} allUsers={allUsers} setEditingUser={setEditingUser} setModalType={setModalType} handleDeleteUser={handleDeleteUser} handleUpdateUserStatus={handleUpdateUserStatus} />}
+
+            {view === "auth" && (
+              <AuthForm 
+                key={`auth-${selectedRole}-${authMode}`}
+                {...{authMode, setAuthMode, setView, selectedRole, name, setName, hospitalName, setHospitalName, 
+                loginEmail, setLoginEmail, email, setEmail, loginPassword, setLoginPassword, password, setPassword, 
+                isLoading, errorMsg, handleAuth, setShowForgotModal, specialty, setSpecialty, licenseId, setLicenseId, 
+                answers 
+                }} 
+              />
+            )}
+
+            {view === "screening" && (
+              <Screening 
+                key="screening"
+                step={step} 
+                setStep={setStep} 
+                questions={ALL_QUESTIONS.filter(q => !q.skipIf || !q.skipIf(answers))} 
+                language={language} 
+                handleAnswer={handleAnswer} 
+                setView={setView} 
+                prefillEmail={currentUser?.email || currentUser?.user?.email || ""}
+                calculatedRisk={getCalculatedRisk(answers)}
+                allAnswers={answers}
+              />
+            )}
+            
+            {view === "patient_dashboard" && (
+              <PatientDashboard 
+                key="patient_dashboard"
+                user={currentUser} 
+                uploadAnalysis={uploadAnalysis} 
+                setUploadAnalysis={setUploadAnalysis}
+                selectedFile={selectedFile} 
+                setSelectedFile={setSelectedFile} 
+                handleFileUpload={async () => {
+                    if(!selectedFile) {
+                        alert("Pehle file select karo!");
+                        return;
+                    }
+                    setIsLoading(true);
+                    const formData = new FormData();
+                    formData.append("file", selectedFile);
+                    formData.append("email", currentUser.email);
+                    
+                    try {
+                        const res = await fetch(`${API_URL}/upload-report`, { 
+                            method: "POST", 
+                            body: formData 
+                        });
+                        
+                        const data = await res.json();
+                        console.log("Server ka jawab:", data);
+                        
+                        if(res.ok && data.success) {
+                            setUploadAnalysis(data.analysis);
+                        } else {
+                            alert("Upload mein masla aaya: " + (data.message || "Unknown Error"));
+                        }
+                    } catch (err) {
+                        console.error("Fetch Error:", err);
+                        alert("Server se connection nahi ho raha!");
+                    } finally {
+                        setIsLoading(false);
+                    }
+                }}
+                onStartScreening={() => setView("screening")}
+              />
+            )}
+
+            {view === "exercises_view" && (
+              <Exercises 
+                key="exercises_view"
+                setView={setView} 
+                user={currentUser} 
+              />
+            )}
+
+            {view === "doctor_dashboard" && (
+              <DoctorDashboard 
+                key="doctor_dashboard"
+                doctorInfo={currentUser} 
+                doctorPatients={doctorPatients} 
+                setDoctorPatients={setDoctorPatients}
+                setSelectedPatient={setSelectedPatient} 
+                setModalType={setModalType} 
+                handleMarkAsSeen={async (id) => {
+                    try { await fetch(`${API_URL}/doctor/mark-seen/${id}`, { method: 'PUT' });
+                    setDoctorPatients(prev => prev.map(p => p.id === id ? { ...p, status: "checked" } : p));
+                    } catch (e) { console.error(e); }
+                }} 
+              />
+            )}
+
+            {view === "admin_dashboard" && adminStats && (
+              <AdminDashboard 
+                key="admin_dashboard"
+                adminStats={adminStats} 
+                allUsers={allUsers} 
+                setEditingUser={setEditingUser} 
+                setModalType={setModalType} 
+                handleDeleteUser={async (id) => {
+                    if(!confirm("Delete user?")) return;
+                    try { await fetch(`${API_URL}/admin/users/${id}`, { method: 'DELETE' });
+                    setAllUsers(allUsers.filter(u => u.id !== id));
+                    } catch(e) { console.error(e); }
+                }} 
+                handleUpdateUserStatus={async (id, data) => {
+                    try { await fetch(`${API_URL}/admin/users/${id}/status`, {
+                        method: 'PATCH', headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(data)
+                      });
+                      setAllUsers(prev => prev.map(u => u.id === id ? { ...u, ...data } : u));
+                    } catch (e) { console.error(e); }
+                }} 
+              />
+            )}
+
+            {view === "exercises_view" && (
+              <Exercises 
+                key="exercises_view"
+                setView={setView} 
+                user={currentUser} 
+              />
+            )}
         </AnimatePresence>
 
-        <GlobalModals showForgotModal={showForgotModal} setShowForgotModal={setShowForgotModal} forgotEmail={forgotEmail} setForgotEmail={setForgotEmail} handleForgotPassword={handleForgotPassword} modalType={modalType} setModalType={setModalType} selectedPatient={selectedPatient} appointDate={appointDate} setAppointDate={setAppointDate} appointMsg={appointMsg} setAppointMsg={setAppointMsg} sendAppointmentEmail={sendAppointmentEmail} editingUser={editingUser} setEditingUser={setEditingUser} handleUpdateUser={handleUpdateUser} isLoading={isLoading} />
+        <GlobalModals 
+          showForgotModal={showForgotModal} setShowForgotModal={setShowForgotModal} 
+          forgotEmail={forgotEmail} setForgotEmail={setForgotEmail} 
+          handleForgotPassword={async () => {
+            try { await fetch(`${API_URL}/forgot-password`, { method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({email: forgotEmail}) });
+            alert("Email sent!"); setShowForgotModal(false); } catch(e) { alert("Error."); }
+          }} 
+          modalType={modalType} setModalType={setModalType} 
+          selectedPatient={selectedPatient} 
+          appointDate={appointDate} setAppointDate={setAppointDate} 
+          appointMsg={appointMsg} setAppointMsg={setAppointMsg} 
+          sendAppointmentEmail={async () => {
+            setIsLoading(true);
+            try {
+              const params = { to_email: selectedPatient.email, to_name: selectedPatient.name, doctor_name: currentUser.name, date_time: appointDate, message: appointMsg };
+              await emailjs.send(SERVICE_ID, TEMPLATE_ID_APPOINT, params, PUBLIC_KEY);
+              alert("Notification sent!"); setModalType(null);
+            } catch(e) { alert("Failed to send."); } finally { setIsLoading(false); }
+          }} 
+          editingUser={editingUser} setEditingUser={setEditingUser} 
+          handleUpdateUser={async () => {
+            try { await fetch(`${API_URL}/admin/users/${editingUser.id}`, { method: 'PUT', headers: {"Content-Type": "application/json"}, body: JSON.stringify({name: editingUser.name, role: editingUser.role}) });
+            setAllUsers(allUsers.map(u => u.id === editingUser.id ? { ...u, name: editingUser.name, full_name: editingUser.name } : u));
+            setModalType(null); } catch(e) { alert("Failed."); }
+          }} 
+          isLoading={isLoading} 
+        />
         <ChatBot />
       </div>
     </div>

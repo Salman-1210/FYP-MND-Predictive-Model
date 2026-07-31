@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { MessageCircle, X, Send, Bot, User } from "lucide-react";
+import { MessageCircle, X, Send, Bot, Loader2 } from "lucide-react";
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,91 +7,99 @@ export default function ChatBot() {
     { id: 1, text: "Hello! I am NeuroBot. How can I help you with MND today?", sender: "bot" }
   ]);
   const [input, setInput] = useState("");
+  const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
 
-  // Auto-scroll to bottom
+  // Getting API key from .env.local
+  const GROQ_API_KEY = process.env.NEXT_PUBLIC_GROQ_API_KEY;
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, isTyping]);
 
-  // Predefined Knowledge Base (Rule-Based)
-  const getBotResponse = (text) => {
-    const lowerText = text.toLowerCase();
-    
-    if (lowerText.includes("hello") || lowerText.includes("hi")) 
-      return "Hi there! Feel free to ask me about symptoms, registration, or doctors.";
-    
-    if (lowerText.includes("symptom") || lowerText.includes("sign")) 
-      return "Common early symptoms of MND include muscle weakness, twitching (fasciculations), slurred speech, and difficulty gripping objects.";
-    
-    if (lowerText.includes("cure") || lowerText.includes("treatment")) 
-      return "Currently, there is no complete cure for MND, but treatments and therapies can manage symptoms and improve quality of life.";
-    
-    if (lowerText.includes("register") || lowerText.includes("sign up")) 
-      return "You can register by clicking the 'Patient Portal' card on the home screen and selecting 'New User? Register'.";
-    
-    if (lowerText.includes("doctor") || lowerText.includes("appointment")) 
-      return "Once logged in, you can view your report analysis. Our system will recommend top neurologists in Karachi based on your results.";
+  // --- AI GENERATIVE LOGIC ---
+  const fetchAIResponse = async (userText) => {
+    if (!GROQ_API_KEY) {
+      return "System: API Key is missing. Please restart your server after adding it to .env.local";
+    }
 
-    if (lowerText.includes("risk") || lowerText.includes("high")) 
-      return "Our AI analyzes your report to detect risk levels. 'High Risk' suggests you should consult a specialist immediately.";
+    try {
+      const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${GROQ_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "llama3-8b-8192",
+          messages: [
+            { 
+              role: "system", 
+              content: "You are NeuroBot, a medical AI assistant for Motor Neuron Disease (MND). Be empathetic and accurate. If asked about doctors, mention specialists in Karachi. Always add a disclaimer that you are an AI, not a doctor." 
+            },
+            { role: "user", content: userText }
+          ],
+          temperature: 0.7,
+        }),
+      });
 
-    return "I am still learning! Please ask about symptoms, cures, registration, or risk levels.";
+      const data = await response.json();
+
+      // FIXED: Added safe checks to prevent "Cannot read properties of undefined (reading '0')"
+      if (data?.choices && data.choices.length > 0) {
+        return data.choices[0].message.content;
+      } else {
+        console.error("API Response Issue:", data);
+        return "I'm having trouble thinking right now. Please try again.";
+      }
+    } catch (error) {
+      console.error("Fetch Error:", error);
+      return "Connection error. Please check your internet.";
+    }
   };
 
-  const handleSend = () => {
-    if (!input.trim()) return;
+  const handleSend = async (overrideText = null) => {
+    const textToSend = overrideText || input;
+    if (!textToSend.trim()) return;
 
-    // 1. Add User Message
-    const newMsg = { id: Date.now(), text: input, sender: "user" };
-    setMessages((prev) => [...prev, newMsg]);
+    // 1. User Message add karein
+    setMessages((prev) => [...prev, { id: Date.now(), text: textToSend, sender: "user" }]);
     setInput("");
+    setIsTyping(true);
 
-    // 2. Simulate Bot Typing Delay
-    setTimeout(() => {
-      const botReply = { id: Date.now() + 1, text: getBotResponse(newMsg.text), sender: "bot" };
-      setMessages((prev) => [...prev, botReply]);
-    }, 600);
+    // 2. AI Response mangwayein
+    const aiReply = await fetchAIResponse(textToSend);
+    
+    setMessages((prev) => [...prev, { id: Date.now() + 1, text: aiReply, sender: "bot" }]);
+    setIsTyping(false);
   };
 
-  // Handle Enter Key
   const handleKeyPress = (e) => {
     if (e.key === "Enter") handleSend();
   };
 
-  // Suggested Chips
-  const suggestions = ["What are the symptoms?", "Is there a cure?", "How to register?", "Contact a Doctor"];
-
-  const handleChipClick = (text) => {
-    const newMsg = { id: Date.now(), text: text, sender: "user" };
-    setMessages((prev) => [...prev, newMsg]);
-    setTimeout(() => {
-      const botReply = { id: Date.now() + 1, text: getBotResponse(text), sender: "bot" };
-      setMessages((prev) => [...prev, botReply]);
-    }, 600);
-  };
+  const suggestions = ["Early symptoms?", "MND treatments", "Register as patient", "Doctors in Karachi"];
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
       
-      {/* Chat Window */}
       {isOpen && (
-        <div className="bg-white w-80 md:w-96 h-[500px] rounded-2xl shadow-2xl border border-slate-200 flex flex-col mb-4 overflow-hidden animate-in slide-in-from-bottom-10 duration-300">
+        <div className="bg-white w-80 md:w-96 h-[550px] rounded-2xl shadow-2xl border border-slate-200 flex flex-col mb-4 overflow-hidden animate-in slide-in-from-bottom-10 duration-300">
           
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 flex justify-between items-center text-white">
+          <div className="bg-gradient-to-r from-blue-700 to-indigo-700 p-4 flex justify-between items-center text-white">
             <div className="flex items-center gap-2">
-              <div className="bg-white/20 p-1.5 rounded-lg">
+              <div className="bg-white/20 p-1.5 rounded-lg shadow-inner">
                 <Bot className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="font-bold text-sm">NeuroBot AI</h3>
+                <h3 className="font-bold text-sm tracking-tight">NeuroBot AI</h3>
                 <p className="text-[10px] text-blue-100 flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 bg-green-400 rounded-full"></span> Online
+                  <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span> Generative
                 </p>
               </div>
             </div>
@@ -101,25 +109,35 @@ export default function ChatBot() {
           </div>
 
           {/* Messages Area */}
-          <div className="flex-1 p-4 overflow-y-auto bg-slate-50 space-y-4">
+          <div className="flex-1 p-4 overflow-y-auto bg-slate-50 space-y-4 no-scrollbar">
             {messages.map((msg) => (
               <div key={msg.id} className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
-                <div className={`max-w-[80%] p-3 rounded-2xl text-sm ${
+                <div className={`max-w-[85%] p-3 rounded-2xl text-[13px] leading-relaxed shadow-sm ${
                   msg.sender === "user" 
                     ? "bg-blue-600 text-white rounded-br-none" 
-                    : "bg-white text-slate-700 shadow-sm border border-slate-100 rounded-bl-none"
+                    : "bg-white text-slate-700 border border-slate-100 rounded-bl-none"
                 }`}>
                   {msg.text}
                 </div>
               </div>
             ))}
+            
+            {/* Thinking Loader */}
+            {isTyping && (
+              <div className="flex justify-start animate-pulse">
+                <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-bl-none shadow-sm flex items-center gap-2">
+                  <Loader2 className="h-3 w-3 text-blue-500 animate-spin" />
+                  <span className="text-[11px] text-slate-400">Thinking...</span>
+                </div>
+              </div>
+            )}
             <div ref={messagesEndRef} />
           </div>
 
           {/* Suggested Chips */}
-          <div className="px-4 py-2 bg-slate-50 flex gap-2 overflow-x-auto no-scrollbar">
+          <div className="px-4 py-2 bg-slate-50 flex gap-2 overflow-x-auto no-scrollbar border-t border-slate-100">
             {suggestions.map((s, i) => (
-              <button key={i} onClick={() => handleChipClick(s)} className="whitespace-nowrap px-3 py-1 bg-white border border-blue-100 text-blue-600 text-xs rounded-full hover:bg-blue-50 transition-colors shadow-sm">
+              <button key={i} onClick={() => handleSend(s)} className="whitespace-nowrap px-3 py-1 bg-white border border-blue-100 text-blue-600 text-[11px] rounded-full hover:bg-blue-600 hover:text-white transition-all shadow-sm">
                 {s}
               </button>
             ))}
@@ -129,23 +147,27 @@ export default function ChatBot() {
           <div className="p-3 bg-white border-t border-slate-100 flex gap-2">
             <input 
               type="text" 
-              className="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-blue-500"
-              placeholder="Type a message..."
+              className="flex-1 bg-slate-100 border-none rounded-xl px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none"
+              placeholder="Ask me anything..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyPress}
             />
-            <button onClick={handleSend} className="bg-blue-600 hover:bg-blue-700 text-white p-2.5 rounded-xl transition-colors">
+            <button 
+              onClick={() => handleSend()} 
+              disabled={isTyping || !input.trim()}
+              className="bg-blue-600 hover:bg-blue-700 disabled:bg-slate-300 text-white p-2.5 rounded-xl transition-all shadow-md"
+            >
               <Send className="h-4 w-4" />
             </button>
           </div>
         </div>
       )}
 
-      {/* Floating Toggle Button */}
+      {/* Toggle Button */}
       <button 
         onClick={() => setIsOpen(!isOpen)} 
-        className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg hover:shadow-blue-500/40 transition-all transform hover:scale-110 active:scale-95 flex items-center justify-center"
+        className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-xl transition-all transform hover:scale-110 active:scale-95 flex items-center justify-center ring-4 ring-white"
       >
         {isOpen ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
       </button>

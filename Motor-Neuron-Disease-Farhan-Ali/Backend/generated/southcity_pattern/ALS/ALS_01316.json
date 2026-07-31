@@ -1,0 +1,93 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "ELBOW",
+      "Latency_ms": "10.39",
+      "Distance_cm": "25.23",
+      "Amplitude_mv": "0.28",
+      "NCV_ms": "46.98"
+    },
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "13.56",
+      "Distance_cm": "28.85",
+      "Amplitude_mv": "1.37",
+      "NCV_ms": "36.43"
+    },
+    {
+      "Nerve_Muscles": "Lt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "4.23",
+      "Distance_cm": "6.52",
+      "Amplitude_mv": "3.50",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "10.55",
+      "Distance_cm": "11.41",
+      "Amplitude_mv": "3.01",
+      "NCV_ms": "53.66"
+    },
+    {
+      "Nerve_Muscles": "\"",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "9.65",
+      "Distance_cm": "8.84",
+      "Amplitude_mv": "0.28",
+      "NCV_ms": "52.31"
+    },
+    {
+      "Nerve_Muscles": "Rt. Post. tibial AH",
+      "Stimulus_Site": "ANKLE",
+      "Latency_ms": "5.26",
+      "Distance_cm": "6.76",
+      "Amplitude_mv": "2.28",
+      "NCV_ms": "-"
+    },
+    {
+      "Nerve_Muscles": "Rt. Ulnar ADQ",
+      "Stimulus_Site": "WRIST",
+      "Latency_ms": "5.14",
+      "Distance_cm": "7.67",
+      "Amplitude_mv": "0.86",
+      "NCV_ms": "-"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Sural",
+      "Recording_Site": "Ankle",
+      "Stimulation_Site": "Calf",
+      "Latency_ms": "2.37",
+      "Distance_cm": "13.01",
+      "Amplitude_uv": "8.42",
+      "NCV_ms": "45.47"
+    },
+    {
+      "Nerve": "Lt. Ulnar",
+      "Recording_Site": "F5",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "2.78",
+      "Distance_cm": "13.59",
+      "Amplitude_uv": "27.73",
+      "NCV_ms": "49.80"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. TA",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Fasc",
+      "Amp": "High",
+      "Duration": "Increased",
+      "Polys": "Polyphasic",
+      "Recruit": "Reduced",
+      "Interference": "Poor"
+    }
+  ]
+}

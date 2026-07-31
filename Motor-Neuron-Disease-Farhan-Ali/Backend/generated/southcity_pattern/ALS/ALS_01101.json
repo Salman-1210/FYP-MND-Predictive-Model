@@ -1,0 +1,60 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "P. KNEE",
+      "Latency_ms": "17.39",
+      "Distance_cm": "8.47",
+      "Amplitude_mv": "1.50",
+      "NCV_ms": "41.56"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "P. ELBOW",
+      "Latency_ms": "9.76",
+      "Distance_cm": "10.45",
+      "Amplitude_mv": "2.97",
+      "NCV_ms": "54.67"
+    },
+    {
+      "Nerve_Muscles": "",
+      "Stimulus_Site": "D. KNEE",
+      "Latency_ms": "12.52",
+      "Distance_cm": "29.17",
+      "Amplitude_mv": "1.45",
+      "NCV_ms": "36.66"
+    },
+    {
+      "Nerve_Muscles": "\" \" \" \" \" \"",
+      "Stimulus_Site": "ELBOW",
+      "Latency_ms": "9.25",
+      "Distance_cm": "21.55",
+      "Amplitude_mv": "0.28",
+      "NCV_ms": "53.19"
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Median",
+      "Recording_Site": "F2",
+      "Stimulation_Site": "WRIST",
+      "Latency_ms": "3.17",
+      "Distance_cm": "14.21",
+      "Amplitude_uv": "21.00",
+      "NCV_ms": "45.76"
+    }
+  ],
+  "Electromyography": [
+    {
+      "Muscles": "Rt. Orbi. Oris",
+      "Fibs": "+++",
+      "Psw": "+++",
+      "Others": "Fasc",
+      "Amp": "-",
+      "Duration": "Long",
+      "Polys": "Increased",
+      "Recruit": "Reduced",
+      "Interference": "RFR"
+    }
+  ]
+}

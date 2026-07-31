@@ -1,0 +1,32 @@
+{
+  "Motor_Nerve_Conduction_Studies": [
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "E",
+      "Latency_ms": "2.35",
+      "Distance_cm": "24.31",
+      "Amplitude_mv": "1.16",
+      "NCV_ms": "55.15"
+    },
+    {
+      "Nerve_Muscles": "Rt. Median APB",
+      "Stimulus_Site": "W",
+      "Latency_ms": "2.18",
+      "Distance_cm": "6.90",
+      "Amplitude_mv": "1.14",
+      "NCV_ms": ""
+    }
+  ],
+  "Sensory_Nerve_Conduction_Studies": [
+    {
+      "Nerve": "Rt. Sural",
+      "Recording_Site": "A",
+      "Stimulation_Site": "Calf",
+      "Latency_ms": "NR",
+      "Distance_cm": "NR",
+      "Amplitude_uv": "NR",
+      "NCV_ms": "NR"
+    }
+  ],
+  "Electromyography": []
+}
