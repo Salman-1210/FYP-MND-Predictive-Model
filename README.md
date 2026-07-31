@@ -2,7 +2,7 @@
   <b>AI-Powered Predictive Modeling for Motor Neuron Disease (MND)</b><br>
   Early diagnosis, risk assessment, and patient care platform for ALS, PBP, and PMA.
 </p>
-=======
+
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js&logoColor=white" />
